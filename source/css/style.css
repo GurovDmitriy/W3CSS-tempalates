@@ -97,6 +97,213 @@ textarea {
 footer {
   flex-grow: 1;
 }
+/*burger*/
+.usr-burger {
+  position: absolute;
+  top: 28px;
+  right: 32px;
+  display: block;
+  width: 40px;
+  height: 20px;
+  padding: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid var(--colorBlack);
+  background-color: transparent;
+}
+.usr-burger::before,
+.usr-burger::after {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: var(--colorBlack);
+}
+.usr-burger::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.usr-burger::after {
+  top: 50%;
+  right: 0;
+  width: 100%;
+}
+.usr-burger--open {
+  animation-name: burgerOpen;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+.usr-burger--open::after {
+  animation-name: burgerAfterOpen;
+  animation-duration: 0.5s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+.usr-burger--open::before {
+  animation-name: burgerBeforeOpen;
+  animation-duration: 0.5s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+.usr-burger--close {
+  animation-name: burgerClose;
+  animation-duration: 0.2s;
+  animation-delay: 0.5s;
+  animation-direction: reverse;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+}
+.usr-burger--close::after {
+  animation-name: burgerAfterClose;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+}
+.usr-burger--close::before {
+  animation-name: burgerBeforeClose;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+}
+@keyframes burgerOpen {
+  0% {
+    border-bottom: 2px solid var(--colorBlack);
+  }
+  100% {
+    border-bottom: 2px solid transparent;
+  }
+}
+@keyframes burgerAfterOpen {
+  0% {
+    width: 100%;
+  }
+  25% {
+    width: 100%;
+    transform: translateY(0) rotate(0) scaleX(1);
+  }
+  25% {
+    width: 100%;
+    transform: translateY(0) rotate(0) scaleX(1);
+  }
+  50% {
+    width: 100%;
+    transform: translateY(0) rotate(0) scaleX(0.6);
+  }
+  50% {
+    width: 100%;
+    transform: translateY(0) rotate(0) scaleX(0.6);
+  }
+  75% {
+    width: 100%;
+    transform: translateY(0) rotate(0) scaleX(0.6);
+  }
+  100% {
+    width: 100%;
+    transform: translateY(-50%) rotate(45deg) scaleX(0.6);
+  }
+}
+@keyframes burgerBeforeOpen {
+  0% {
+    transform: translateY(0) rotate(0) scaleX(1);
+  }
+  25% {
+    top: 0;
+    transform: translateY(0) rotate(0) scaleX(1);
+  }
+  25% {
+    top: 0;
+    transform: translateY(0) rotate(0) scaleX(1);
+  }
+  50% {
+    top: 0;
+    transform: translateY(0) rotate(0) scaleX(0.6);
+  }
+  75% {
+    top: 50%;
+    transform: translateY(-50%) rotate(0) scaleX(0.6);
+  }
+  75% {
+    top: 50%;
+    transform: translateY(-50%) rotate(0) scaleX(0.6);
+  }
+  100% {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg) scaleX(0.6);
+  }
+}
+@keyframes burgerClose {
+  0% {
+    border-bottom: 2px solid var(--colorBlack);
+  }
+  100% {
+    border-bottom: 2px solid transparent;
+  }
+}
+@keyframes burgerAfterClose {
+  0% {
+    width: 100%;
+  }
+  25% {
+    width: 100%;
+    transform: translateY(0) rotate(0) scaleX(1);
+  }
+  25% {
+    width: 100%;
+    transform: translateY(0) rotate(0) scaleX(1);
+  }
+  50% {
+    width: 100%;
+    transform: translateY(0) rotate(0) scaleX(0.6);
+  }
+  50% {
+    width: 100%;
+    transform: translateY(0) rotate(0) scaleX(0.6);
+  }
+  75% {
+    width: 100%;
+    transform: translateY(0) rotate(0) scaleX(0.6);
+  }
+  100% {
+    width: 100%;
+    transform: translateY(-50%) rotate(45deg) scaleX(0.6);
+  }
+}
+@keyframes burgerBeforeClose {
+  0% {
+    transform: translateY(0) rotate(0) scaleX(1);
+  }
+  25% {
+    top: 0;
+    transform: translateY(0) rotate(0) scaleX(1);
+  }
+  25% {
+    top: 0;
+    transform: translateY(0) rotate(0) scaleX(1);
+  }
+  50% {
+    top: 0;
+    transform: translateY(0) rotate(0) scaleX(0.6);
+  }
+  75% {
+    top: 50%;
+    transform: translateY(-50%) rotate(0) scaleX(0.6);
+  }
+  75% {
+    top: 50%;
+    transform: translateY(-50%) rotate(0) scaleX(0.6);
+  }
+  100% {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg) scaleX(0.6);
+  }
+}
 .w3css-gourment-catering .usr-menu {
   width: 100%;
 }
@@ -114,4 +321,12 @@ footer {
 }
 .w3css-gourment-catering address {
   font-style: normal;
+}
+.w3css-gourment-catering .usr-navbrand {
+  width: 130px;
+}
+@media (min-width: 601px) {
+  .w3css-gourment-catering .usr-navbrand {
+    width: auto;
+  }
 }
