@@ -3,11 +3,11 @@
 <head>
 
   <meta charset="UTF-8">
-  <title>Logo — W3.CSS Tempalates</title>
+  <title>Logo — W3.CSS Templates</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"              content="Logo — W3.CSS Tempalates">
+  <meta name="description"              content="Logo — W3.CSS Templates">
   <meta name="keywords"                 content="logo, w3css, templates">
   <meta name="author"                   content="Gurov Dmitriy">
   <meta name="robots"                   content="">
@@ -16,8 +16,13 @@
 
   <!--   <link rel="preload" href="fonts/woff2/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>-->
 
-  <link rel="preload" href="css/style.css"                                                         as="style">
 
+  <link rel="preload" href="https://www.w3schools.com/w3css/4/w3.css"         as="style">
+  <link rel="preload" href="https://www.w3schools.com/lib/w3-theme-black.css" as="style">
+  <link rel="preload" href="css/style.css"                                    as="style">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
 
   <link rel="apple-touch-icon"                      sizes="180x180" href="image/favicon/apple-touch-icon.png">
@@ -40,17 +45,42 @@
 
   <div style="display: none">svgsprite</div>
 
-  <header>
+  <header class="w3-container w3-theme-l4 w3-center">
 
-    <h1>My project start rep</h1>
+    <h1 class="w3-jumbo">W3.CSS Templates</h1>
 
     <a class="skip-link" href="#main">skip-link</a>
 
   </header>
 
-  <main id="main"></main>
+  <main class="w3-container" id="main">
 
-  <footer></footer>
+    <h2 class="w3-center">Navigation</h2>
+
+    <nav>
+      <ul class="w3-ul">
+        <li><a class="w3-block w3-hover-theme" href="#">Link</a></li>
+        <li><a class="w3-block w3-hover-theme" href="#">Link</a></li>
+        <li><a class="w3-block w3-hover-theme" href="#">Link</a></li>
+        <li><a class="w3-block w3-hover-theme" href="#">Link</a></li>
+        <li><a class="w3-block w3-hover-theme" href="#">Link</a></li>
+        <li><a class="w3-block w3-hover-theme" href="#">Link</a></li>
+        <li><a class="w3-block w3-hover-theme" href="#">Link</a></li>
+        <li><a class="w3-block w3-hover-theme" href="#">Link</a></li>
+      </ul>
+    </nav>
+
+  </main>
+
+  <footer class="w3-container w3-theme-l1 w3-center">
+
+    <h2 class="visually-hidden">Contacts</h2>
+
+    <p>Create by <a href="#">Logo</a></p>
+
+    <p>Powered by <a href="#">w3.css</a></p>
+
+  </footer>
 
   <script src="js/focus-visible.js" async></script>
 

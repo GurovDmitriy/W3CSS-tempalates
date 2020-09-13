@@ -16,9 +16,12 @@ html {
 }
 
 body {
-  min-width: @mobileWidth;
+  display: flex;
+  flex-direction: column;
 
-  .fontTextMobile();
+  min-height: 600px;
+  height: 100vh;
+  min-width: @mobileWidth;
 }
 
 /* только для скринридера */
@@ -76,4 +79,10 @@ button:focus:not(:focus-visible) {
 
 .skip-link:focus {
   top: 0;
+}
+
+/*standart tag*/
+
+footer {
+  flex-grow: 1;
 }
