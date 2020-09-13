@@ -40,11 +40,11 @@
 
 <body class="w3css-gourment-catering">
 
-  <header class="w3-top w3-card">
+  <header>
 
     <h1 class="visually-hidden">Gourmet Catering</h1>
 
-    <nav class="w3-bar w3-white w3-padding w3-wide">
+    <nav class="w3-top w3-bar w3-card w3-white w3-padding w3-wide">
 
       <h2 class="visually-hidden">Navigation</h2>
       <a class="skip-link" href="#main">skip-link</a>
@@ -59,11 +59,7 @@
 
     </nav>
 
-  </header>
-
-  <main id="main">
-
-    <section class="w3-content w3-display-container usr-main-image">
+    <div class="w3-content w3-display-container usr-main-image">
       <h2 class="visually-hidden">Product day</h2>
 
       <picture>
@@ -76,9 +72,13 @@
       <div class="w3-display-bottomleft w3-bar w3-padding w3-wide w3-opacity">
         <p class="w3-xxlarge">Le Catering</p>
       </div>
-    </section>
+    </div>
 
-    <section class="w3-row w3-content w3-padding-64">
+  </header>
+
+  <main class="w3-content" id="main">
+
+    <section class="w3-row w3-padding-64">
 
       <div class="w3-col w3-padding m6 w3-hide-small">
         <picture>
@@ -90,7 +90,7 @@
       </div>
 
       <div class="w3-col w3-padding m6">
-        <h2 class="w3-center" id="#about">About catering</h2>
+        <h2 class="w3-center w3-wide" id="#about" tabindex="0">About catering</h2>
         <p class="w3-center w3-wide">Tradition since 1889</p>
         <p>Co-create but shine energize resist; entrepreneur issue outcomes communities. Save the world philanthropy; change-makers low-hanging fruit low-hanging fruit effective altruism do-gooder. Overcome injustice changemaker; impact bandwidth inspire, social impact inspire social enterprise. Framework global; compassion because, movements; segmentation policymaker entrepreneur, when uplift white paper, greenwashing social <mark class="w3-tag w3-light-grey">entrepreneur</mark> families activate policymaker.</p>
         <p class="w3-text-grey w3-hide-medium">Black lives matter triple bottom line activate social innovation to. Citizen-centered triple bottom line justice revolutionary peaceful humanitarian engaging green space. Collaborative cities living a.</p>
@@ -98,36 +98,56 @@
 
     </section>
 
-    <section class="w3-row w3-content w3-padding-64">
+    <hr>
 
-      <div class="w3-col m6 w3-padding">
-        <h2 class="w3-center" id="#menu">Our menu</h2>
+    <section class="w3-row w3-padding-64">
 
-        <ul class="w3-ul">
-          <li>
-            <h3 class="w3-wide w3-large">Bread Basket</h3>
-            <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p>
-          </li>
-          <li>
-            <h3 class="w3-wide w3-large">Honey Almond Granola with Fruits</h3>
-            <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
-          </li>
-          <li>
-            <h3 class="w3-wide w3-large">Belgian Waffle</h3>
-            <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p>
-          </li>
-          <li>
-            <h3 class="w3-wide w3-large">Scrambled eggs</h3>
-            <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>
-          </li>
-          <li>
-            <h3 class="w3-wide w3-large">Blueberry Pancakes</h3>
-            <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>
-          </li>
-        </ul>
+      <div class="w3-col l6">
+        <h2 class="w3-center w3-wide" id="#menu" tabindex="0">Our menu</h2>
+
+        <div class="w3-responsive">
+          <table class="w3-table">
+            <tr>
+              <td>
+                <h3 class="w3-wide w3-large">Bread Basket</h3>
+                <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins</p>
+              </td>
+              <td><span class="w3-tag w3-light-grey">5.50</span></td>
+            </tr>
+            <tr>
+              <td>
+                <h3 class="w3-wide w3-large">Honey Almond Granola with Fruits</h3>
+                <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates</p>
+              </td>
+              <td><span class="w3-tag w3-light-grey">7.00</span></td>
+            </tr>
+            <tr>
+              <td>
+                <h3 class="w3-wide w3-large">Belgian Waffle</h3>
+                <p class="w3-text-grey">Vanilla flavored batter with malted flour</p>
+              </td>
+              <td><span class="w3-tag w3-light-grey">7.50</span></td>
+            </tr>
+            <tr>
+              <td>
+                <h3 class="w3-wide w3-large">Scrambled eggs</h3>
+                <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions</p>
+              </td>
+              <td><span class="w3-tag w3-light-grey">7.50</span></td>
+            </tr>
+            <tr>
+              <td>
+                <h3 class="w3-wide w3-large">Blueberry Pancakes</h3>
+                <p class="w3-text-grey">With syrup, butter and lots of berries</p>
+              </td>
+              <td><span class="w3-tag w3-light-grey">8.50</span></td>
+            </tr>
+          </table>
+        </div>
+
       </div>
 
-      <div class="w3-col m6 w3-padding w3-hide-small">
+      <div class="w3-col l6 w3-padding">
         <picture>
           <source type="image/webp"
                   srcset="image/min/img-baker-2.webp">
@@ -138,35 +158,48 @@
 
     </section>
 
-    <h2 id="#contact">Contact</h2>
+    <hr>
 
-    <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
+    <section class="w3-container w3-padding-64">
+      <h2 class="w3-wide" id="#contact" tabindex="0">Contact</h2>
 
-    <address>Catering Service, 42nd Living St, 43043 New York, NY</address>
+      <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
 
-    <p>You can also contact us by phone <a href="tel:00553123-2323">00553123-2323</a> or email <a href="mailto:catering@catering.com">catering@catering.com</a>, or you can send us a message here:</p>
+      <address class="w3-text-grey">Catering Service, 42nd Living St, 43043 New York, NY</address>
 
-    <form action="#" method="post">
+      <p>You can also contact us by phone <a class="w3-tag w3-light-grey" href="tel:00553123-2323">00553123-2323</a> or email <a class="w3-tag w3-light-grey" href="mailto:catering@catering.com">catering@catering.com</a> or you can send us a message here:</p>
 
-      <label for="name">Name</label>
-      <input id="name" type="text" name="name" placeholder="Name">
+      <form action="#" method="post">
 
-      <label for="person">Person</label>
-      <input id="person" type="number" name="person" step="1" min="1" max="20" placeholder="How many people">
+        <p>
+          <label class="visually-hidden" for="name">Name</label>
+          <input class="w3-input w3-padding-16" id="name" type="text" name="name" placeholder="Name" required>
+        </p>
 
-      <label for="data">Data</label>
-      <input id="data" type="datetime-local" name="data">
+        <p>
+          <label class="visually-hidden" for="person">Person</label>
+          <input class="w3-input w3-padding-16" id="person" type="number" name="person" step="1" min="1" max="20" placeholder="How many people" required>
+        </p>
 
-      <label for="comment">Comment</label>
-      <textarea id="comment" name="comment" placeholder="Message"></textarea>
+        <p>
+          <label class="visually-hidden" for="data">Data</label>
+          <input class="w3-input w3-padding-16" id="data" type="datetime-local" name="data" required>
+        </p>
 
-      <button type="button">Send</button>
+        <p>
+          <label class="visually-hidden" for="comment">Comment</label>
+          <textarea class="w3-input w3-padding-16" id="comment" name="comment" rows="1" placeholder="Message" required></textarea>
+        </p>
 
-    </form>
+        <button class="w3-button w3-light-grey w3-mobile" type="submit">Send</button>
+
+      </form>
+
+    </section>
 
   </main>
 
-  <footer class="w3-center">
+  <footer class="w3-container w3-padding-32 w3-center w3-light-grey">
 
     <h2 class="visually-hidden">Contacts</h2>
 
