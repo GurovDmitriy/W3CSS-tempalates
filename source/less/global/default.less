@@ -1,0 +1,79 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: @mobileWidth;
+
+  .fontTextMobile();
+}
+
+/* только для скринридера */
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* настройки кастомного фокуса */
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.js-focus-visible .focus-visible {
+  .focusCustom(var(--colorBlack));
+}
+
+.js-focus-visible button.focus-visible {
+  outline-offset: 2px;
+}
+
+/* сслыка пропуска меню */
+
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  z-index: 100;
+
+  padding: 10px;
+
+  color: var(--colorWhite);
+
+  background-color: var(--colorBlack);
+}
+
+.skip-link:focus {
+  top: 0;
+}
