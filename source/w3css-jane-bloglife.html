@@ -82,22 +82,30 @@
       </div>
 
       <div class="w3-modal">
-        <div class="w3-modal-content w3-animate-top w3-padding-large">
-          <button class="w3-button w3-right w3-large usr-modal-btn-close">
+        <div class="w3-modal-content  w3-display-container w3-animate-top">
+
+          <button class="w3-button w3-display-topright w3-black w3-large usr-modal-btn-close">
             <span class="visually-hidden">Close</span>
             <span class="fa fa-remove"></span>
           </button>
-          <h3>Subscribe</h3>
-          <p>Join my mailing list to receive updates on the latest blog posts and other things.</p>
+
+          <header class="w3-container w3-black w3-padding-large w3-center">
+            <h3>Subscribe</h3>
+          </header>
+          <p class="w3-container w3-padding-large">Join my mailing list to receive updates on the latest blog posts and other things.</p>
+
           <form action="#" method="post">
             <label class="visually-hidden" for="email">Enter e-mail</label>
-            <div class="w3-section">
+            <div class="w3-container w3-padding-large">
               <input class="w3-input w3-border" id="email" type="email" name="email" placeholder="Enter e-mail" required>
             </div>
-            <div class="w3-section">
+
+            <footer class="w3-container w3-padding-large">
               <button class="w3-button w3-block w3-red" type="submit">Subscribe</button>
-            </div>
+            </footer>
+
           </form>
+
         </div>
       </div>
 

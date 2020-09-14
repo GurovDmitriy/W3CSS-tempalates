@@ -401,6 +401,10 @@ body.w3css-jane-bloglife {
 .js-focus-visible .w3css-jane-bloglife .w3-modal .focus-visible {
   outline: 2px solid var(--colorBlack);
 }
+.js-focus-visible .w3css-jane-bloglife .usr-modal-btn-close.focus-visible {
+  outline: 2px solid var(--colorWhite);
+  outline-offset: -2px;
+}
 .js-focus-visible .w3css-jane-bloglife nav .focus-visible {
   outline-offset: -2px;
 }
