@@ -372,6 +372,7 @@ footer {
 }
 body.w3css-jane-bloglife {
   font-family: 'Oswald', sans-serif;
+  font-weight: 400;
 }
 .w3css-jane-bloglife img {
   width: 100%;
@@ -390,6 +391,10 @@ body.w3css-jane-bloglife {
 }
 .w3css-jane-bloglife .usr-main-photo p:nth-child(2) {
   text-transform: uppercase;
+}
+.w3css-jane-bloglife .usr-avatar {
+  width: 90px;
+  height: auto;
 }
 .w3css-jane-bloglife .usr-main-photo button,
 .w3css-jane-bloglife header h3 {

@@ -11,3 +11,14 @@ modalBtn.onclick = function () {
 modalClose.onclick = function () {
   modal.classList.remove('usr-show');
 }
+
+const replBtns = document.querySelectorAll('.usr-repl-btn');
+const replModals = document.querySelectorAll('.usr-repl-modal');
+
+for (let i = 0; i < replBtns.length; i++) {
+  replBtns[i].onclick = function () {
+    replModals[i].classList.toggle('usr-hidden');
+  };
+}
+
+
