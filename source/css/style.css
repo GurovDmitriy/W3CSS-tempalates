@@ -304,6 +304,14 @@ footer {
     transform: translateY(-50%) rotate(-45deg) scaleX(0.6);
   }
 }
+.w3css-gourment-catering header {
+  padding-top: 76px;
+}
+@media (min-width: 601px) {
+  .w3css-gourment-catering header {
+    padding-top: 54px;
+  }
+}
 .w3css-gourment-catering .usr-menu {
   width: 100%;
 }
@@ -329,4 +337,25 @@ footer {
   .w3css-gourment-catering .usr-navbrand {
     width: auto;
   }
+}
+.w3css-architect header {
+  padding-top: 54px;
+}
+.w3css-architect .usr-burger {
+  top: 17px;
+}
+.w3css-architect .usr-menu {
+  width: 100%;
+}
+@media (min-width: 601px) {
+  .w3css-architect .usr-menu {
+    width: auto;
+  }
+}
+.w3css-architect img {
+  width: 100%;
+  height: auto;
+}
+.w3css-architect .w3-content {
+  max-width: 1500px;
 }
