@@ -6,6 +6,13 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Open-Sans';
+  src: url('../fonts/woff2/OpenSans-Regular.woff2') format('woff2-variations');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 /* переменные css */
 :root {
   /* переменные цвета */
@@ -371,19 +378,32 @@ footer {
   max-width: 1532px;
 }
 body.w3css-jane-bloglife {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Open-Sans', sans-serif;
   font-weight: 400;
+}
+body.w3css-jane-bloglife h1,
+body.w3css-jane-bloglife h2,
+body.w3css-jane-bloglife h3,
+body.w3css-jane-bloglife .usr-main-caption,
+body.w3css-jane-bloglife .usr-main-photo-caption {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 .w3css-jane-bloglife img {
   width: 100%;
   height: auto;
 }
+.w3css-jane-bloglife ul a {
+  text-decoration: none;
+}
+.w3css-jane-bloglife ul h3,
+.w3css-jane-bloglife ul p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .w3css-jane-bloglife .w3-content {
   max-width: 1600px;
-}
-.w3css-jane-bloglife .usr-main-caption {
-  text-transform: uppercase;
-  font-weight: bold;
 }
 .w3css-jane-bloglife .usr-main-photo p {
   margin-top: 0;
@@ -394,6 +414,10 @@ body.w3css-jane-bloglife {
 }
 .w3css-jane-bloglife .usr-avatar {
   width: 90px;
+  height: auto;
+}
+.w3css-jane-bloglife .usr-avatar-min {
+  width: 50px;
   height: auto;
 }
 .w3css-jane-bloglife .usr-main-photo button,

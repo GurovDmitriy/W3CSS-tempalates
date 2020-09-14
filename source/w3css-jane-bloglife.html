@@ -15,6 +15,7 @@
   <meta name="google-site-verification" content="">
 
   <link rel="preload" href="fonts/woff2/Oswald-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/woff2/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="preload" href="https://www.w3schools.com/w3css/4/w3.css"         as="style">
   <link rel="preload" href="css/style.css"                                    as="style">
@@ -74,7 +75,7 @@
 
           <img class="w3-image" src="image/min/jane.jpg" width="1600" height="1060" alt="Jane photo">
         </picture>
-        <div class="w3-display-left w3-padding-large w3-text-white">
+        <div class="w3-display-left w3-padding-large w3-text-white usr-main-photo-caption">
           <p class="w3-xxlarge w3-wide">Jane's</p>
           <p class="w3-hide-small w3-jumbo">Fashion Blog</p>
           <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off usr-modal-btn" type="button">Subscribe</button>
@@ -318,36 +319,72 @@
 
       <aside class="w3-col l4 w3-padding-large">
 
-        <section class="">
+        <section class="w3-margin-bottom">
           <h2 class="visually-hidden">Profile</h2>
           <picture>
             <source type="image/webp"
-                    srcset="image/min/img-work-2-desktop.webp">
+                    srcset="image/min/avatar_girl2.webp">
 
-            <img class="" src="image/min/img-work-2-mobile.jpg" width="" height="" alt="">
+            <img class="w3-image w3-grayscale" src="image/min/avatar_girl2.jpg" width="300" height="160" alt="Avatar">
           </picture>
-          <h3>My name</h3>
-          <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+          <div class="w3-container w3-black">
+            <h3>My name</h3>
+            <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+          </div>
         </section>
 
-        <section>
-          <h2>Popular Posts</h2>
-          <ul>
+        <section class="w3-margin-bottom w3-white">
+          <div class="w3-container w3-black">
+            <h2>Popular Posts</h2>
+          </div>
+          <ul class="w3-ul w3-hoverable">
             <li>
-              <h3>Denim</h3>
-              <p>Sed mattis nunc</p>
+              <a class="w3-block" href="#">
+                <picture>
+                  <source type="image/webp"
+                          srcset="image/min/avatar_smoke.webp">
+
+                  <img class="w3-image w3-left w3-margin-right usr-avatar-min" src="image/min/avatar_smoke.jpg" width="200" height="223">
+                </picture>
+                <h3>Denim</h3>
+                <p>Sed mattis nunc</p>
+              </a>
             </li>
             <li>
-              <h3>Sweaters</h3>
-              <p>Praes tinci sed</p>
+              <a class="w3-block" href="#">
+                <picture>
+                  <source type="image/webp"
+                          srcset="image/min/bandmember.webp">
+
+                  <img class="w3-image w3-left w3-margin-right usr-avatar-min" src="image/min/bandmember.jpg" width="255" height="255">
+                </picture>
+                <h3>Sweaters</h3>
+                <p>Praes tinci sed</p>
+              </a>
             </li>
             <li>
-              <h3>Workshop</h3>
-              <p>Ultricies congue</p>
+              <a class="w3-block" href="#">
+                <picture>
+                  <source type="image/webp"
+                          srcset="image/min/workshop.webp">
+
+                  <img class="w3-image w3-left w3-margin-right usr-avatar-min" src="image/min/workshop.jpg" width="300" height="300">
+                </picture>
+                <h3>Workshop</h3>
+                <p>Ultricies congue</p>
+              </a>
             </li>
             <li>
-              <h3>Trends</h3>
-              <p>External partners strategize</p>
+              <a class="w3-block" href="#">
+                <picture>
+                  <source type="image/webp"
+                          srcset="image/min/avatar_smoke.webp">
+
+                  <img class="w3-image w3-left w3-margin-right usr-avatar-min" src="image/min/avatar_smoke.jpg" width="200" height="223">
+                </picture>
+                <h3>Trends</h3>
+                <p>External partners strategize</p>
+              </a>
             </li>
           </ul>
         </section>
