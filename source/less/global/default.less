@@ -58,6 +58,10 @@ button:focus:not(:focus-visible) {
   .focusCustom(var(--colorBlack));
 }
 
+.js-focus-visible footer .focus-visible {
+  .focusCustom(var(--colorWhite));
+}
+
 .js-focus-visible button.focus-visible {
   outline-offset: 2px;
 }
@@ -94,6 +98,14 @@ textarea {
 
 footer {
   flex-grow: 1;
+}
+
+.usr-show {
+  display: block;
+}
+
+.usr-hidden {
+  display: none;
 }
 
 /*burger*/

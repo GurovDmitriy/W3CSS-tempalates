@@ -14,13 +14,15 @@
   <meta name="googlebot"                content="">
   <meta name="google-site-verification" content="">
 
-  <!--   <link rel="preload" href="fonts/woff2/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>-->
+  <link rel="preload" href="fonts/woff2/Oswald-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="preload" href="https://www.w3schools.com/w3css/4/w3.css"         as="style">
   <link rel="preload" href="css/style.css"                                    as="style">
 
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
+
 
   <link rel="apple-touch-icon"                      sizes="180x180" href="image/favicon/apple-touch-icon.png">
   <link rel="icon"             type="image/svg+xml"                 href="image/favicon/typewriter.svg">
@@ -38,7 +40,7 @@
 
 </head>
 
-<body class="w3css-jane-bloglife">
+<body class="w3-light-grey w3css-jane-bloglife">
 
   <header>
 
@@ -46,27 +48,59 @@
 
     <a class="skip-link" href="#main">skip-link</a>
 
-    <nav>
+    <nav class="w3-bar w3-black w3-hide-small">
       <h2 class="visually-hidden">Navigation</h2>
+      <a class="w3-bar-item w3-button" href="#"><span class="visually-hidden">facebook</span><span class="fa fa-facebook-official"></span></a>
+      <a class="w3-bar-item w3-button" href="#"><span class="visually-hidden">instagramm</span><span class="fa fa-instagram"></span></a>
+      <a class="w3-bar-item w3-button" href="#"><span class="visually-hidden">snapchat</span><span class="fa fa-snapchat"></span></a>
+      <a class="w3-bar-item w3-button" href="#"><span class="visually-hidden">twitter</span><span class="fa fa-twitter"></span></a>
+      <a class="w3-bar-item w3-button" href="#"><span class="visually-hidden">fliskr</span><span class="fa fa-flickr"></span></a>
+      <a class="w3-bar-item w3-button" href="#"><span class="visually-hidden">linkedin</span><span class="fa fa-linkedin"></span></a>
+
+      <a class="w3-bar-item w3-button w3-right" href="#"><span class="visually-hidden">fliskr</span><span class="fa fa-search"></span></a>
     </nav>
 
-    <p class="">Jane Bloglife</p>
-    <p>Welcome to the blog of Jane's world</p>
+    <div class="w3-content">
 
-    <div class="">
-      <img src="" alt="">
-      <p>Jane's Fashion Blog</p>
-      <button type="button">Subscribe</button>
-    </div>
+      <div class="w3-container w3-white w3-center">
+        <p class="w3-xxlarge usr-main-caption">Jane Bloglife</p>
+        <p class="w3-large">Welcome to the blog of <span class="w3-tag">Jane's world</span></p>
+      </div>
 
-    <div class="">
-      <h3>Subscribe</h3>
-      <p>Join my mailing list to receive updates on the latest blog posts and other things.</p>
-      <form action="#" method="post">
-        <label class="visually-hidden" for="email">Enter e-mail</label>
-        <input id="email" type="email" name="email" placeholder="Enter e-mail" required>
-        <button type="submit">Subscribe</button>
-      </form>
+      <div class="w3-display-container usr-main-photo">
+        <picture>
+          <source type="image/webp"
+                  srcset="image/min/jane.webp">
+
+          <img class="w3-image" src="image/min/jane.jpg" width="1600" height="1060" alt="Jane photo">
+        </picture>
+        <div class="w3-display-left w3-padding-large w3-text-white">
+          <p class="w3-xxlarge w3-wide">Jane's</p>
+          <p class="w3-hide-small w3-jumbo">Fashion Blog</p>
+          <button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off usr-modal-btn" type="button">Subscribe</button>
+        </div>
+      </div>
+
+      <div class="w3-modal">
+        <div class="w3-modal-content w3-animate-top w3-padding-large">
+          <button class="w3-button w3-right w3-large usr-modal-btn-close">
+            <span class="visually-hidden">Close</span>
+            <span class="fa fa-remove"></span>
+          </button>
+          <h3>Subscribe</h3>
+          <p>Join my mailing list to receive updates on the latest blog posts and other things.</p>
+          <form action="#" method="post">
+            <label class="visually-hidden" for="email">Enter e-mail</label>
+            <div class="w3-section">
+              <input class="w3-input w3-border" id="email" type="email" name="email" placeholder="Enter e-mail" required>
+            </div>
+            <div class="w3-section">
+              <button class="w3-button w3-block w3-red" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
     </div>
 
   </header>
@@ -180,6 +214,7 @@
   </footer>
 
   <script src="js/default.js"       async></script>
+  <script src="js/janeblog.js"       async></script>
   <script src="js/focus-visible.js" async></script>
 
 </body>

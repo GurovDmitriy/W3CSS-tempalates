@@ -1,19 +1,11 @@
 /*@import 'global/normalize.less';*/
-/* @font-face {
-  font-family: 'Poppins';
-  src: url('../../fonts/woff2/Poppins-Regular.woff2') format('woff2');
-  font-weight: 400;
+@font-face {
+  font-family: 'Oswald';
+  src: url('../fonts/woff2/Oswald-VariableFont_wght.woff2') format('woff2-variations');
+  font-weight: 200 700;
   font-style: normal;
   font-display: swap;
 }
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('../../fonts/woff2/Poppins-ExtraLightItalic.woff2') format('woff2');
-  font-weight: 200;
-  font-style: italic;
-  font-display: swap;
-} */
 /* переменные css */
 :root {
   /* переменные цвета */
@@ -74,6 +66,9 @@ button:focus:not(:focus-visible) {
 .js-focus-visible .focus-visible {
   outline: 2px solid var(--colorBlack);
 }
+.js-focus-visible footer .focus-visible {
+  outline: 2px solid var(--colorWhite);
+}
 .js-focus-visible button.focus-visible {
   outline-offset: 2px;
 }
@@ -100,6 +95,12 @@ textarea {
 }
 footer {
   flex-grow: 1;
+}
+.usr-show {
+  display: block;
+}
+.usr-hidden {
+  display: none;
 }
 /*burger*/
 .usr-burger {
@@ -342,6 +343,9 @@ footer {
     width: auto;
   }
 }
+.js-focus-visible .w3css-gourment-catering footer .focus-visible {
+  outline: 2px solid var(--colorBlack);
+}
 .w3css-architect header {
   padding-top: 54px;
 }
@@ -365,4 +369,38 @@ footer {
 }
 .w3css-architect main.w3-content {
   max-width: 1532px;
+}
+body.w3css-jane-bloglife {
+  font-family: 'Oswald', sans-serif;
+}
+.w3css-jane-bloglife img {
+  width: 100%;
+  height: auto;
+}
+.w3css-jane-bloglife .w3-content {
+  max-width: 1600px;
+}
+.w3css-jane-bloglife .usr-main-caption {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.w3css-jane-bloglife .usr-main-photo p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.w3css-jane-bloglife .usr-main-photo p:nth-child(2) {
+  text-transform: uppercase;
+}
+.w3css-jane-bloglife .usr-main-photo button,
+.w3css-jane-bloglife header h3 {
+  text-transform: uppercase;
+}
+.js-focus-visible .w3css-jane-bloglife header .focus-visible {
+  outline: 2px solid var(--colorWhite);
+}
+.js-focus-visible .w3css-jane-bloglife .w3-modal .focus-visible {
+  outline: 2px solid var(--colorBlack);
+}
+.js-focus-visible .w3css-jane-bloglife nav .focus-visible {
+  outline-offset: -2px;
 }
