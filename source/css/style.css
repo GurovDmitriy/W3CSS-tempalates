@@ -91,6 +91,10 @@ button:focus:not(:focus-visible) {
   top: 0;
 }
 /*standart tag*/
+figure {
+  margin: 0;
+  padding: 0;
+}
 textarea {
   resize: vertical;
 }
@@ -358,4 +362,7 @@ footer {
 }
 .w3css-architect .w3-content {
   max-width: 1500px;
+}
+.w3css-architect main.w3-content {
+  max-width: 1532px;
 }
