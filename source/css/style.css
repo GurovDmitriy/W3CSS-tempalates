@@ -525,3 +525,19 @@ body.w3css-photolio {
 .js-focus-visible .w3css-photolio .focus-visible {
   outline: 2px solid var(--colorGrey);
 }
+body.w3css-photographer {
+  font-family: 'Montserrat', sans-serif;
+}
+.w3css-photographer header p {
+  text-transform: uppercase;
+}
+.w3css-photographer img {
+  width: 100%;
+  height: auto;
+}
+.w3css-photographer .w3-content {
+  max-width: 1500px;
+}
+.js-focus-visible .w3css-photographer .focus-visible {
+  outline: 2px solid var(--colorGrey);
+}
