@@ -145,10 +145,9 @@ footer {
   width: 40px;
   height: 20px;
   padding: 0;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 2px solid var(--colorBlack);
+  border: none;
+  box-shadow: 0 2px 0 0 var(--colorBlack);
+  /*  border-bottom: 2px solid var(--colorBlack);*/
   background-color: transparent;
 }
 .usr-burger::before,
@@ -213,10 +212,12 @@ footer {
 }
 @keyframes burgerOpen {
   0% {
-    border-bottom: 2px solid var(--colorBlack);
+    box-shadow: 0 2px 0 0 var(--colorBlack);
+    /*border-bottom: 2px solid var(--colorBlack);*/
   }
   100% {
-    border-bottom: 2px solid transparent;
+    box-shadow: 0 2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
   }
 }
 @keyframes burgerAfterOpen {
@@ -279,10 +280,12 @@ footer {
 }
 @keyframes burgerClose {
   0% {
-    border-bottom: 2px solid var(--colorBlack);
+    box-shadow: 0 2px 0 0 var(--colorBlack);
+    /*border-bottom: 2px solid var(--colorBlack);*/
   }
   100% {
-    border-bottom: 2px solid transparent;
+    box-shadow: 0 2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
   }
 }
 @keyframes burgerAfterClose {
@@ -502,14 +505,21 @@ body.w3css-photolio {
 .w3css-photolio nav a {
   text-decoration: none;
 }
+.w3css-photolio img {
+  width: 100%;
+  height: auto;
+}
+.w3css-photolio .w3-content {
+  max-width: 1500px;
+}
 .w3css-photolio .usr-burger {
-  width: 60px;
-  height: 30px;
-  border-bottom: 4px solid var(--colorGrey);
+  width: 50px;
+  height: 20px;
+  box-shadow: 0 3px 0 0 var(--colorGrey);
 }
 .w3css-photolio .usr-burger::before,
 .w3css-photolio .usr-burger::after {
-  height: 4px;
+  height: 3px;
   background-color: var(--colorGrey);
 }
 .js-focus-visible .w3css-photolio .focus-visible {

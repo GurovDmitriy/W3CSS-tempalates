@@ -126,10 +126,9 @@ footer {
   height: 20px;
   padding: 0;
 
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 2px solid var(--colorBlack);
+  border: none;
+  box-shadow: 0 2px 0 0 var(--colorBlack);
+/*  border-bottom: 2px solid var(--colorBlack);*/
   background-color: transparent;
 
   &::before,
@@ -208,11 +207,13 @@ footer {
 
 @keyframes burgerOpen {
   0% {
-    border-bottom: 2px solid var(--colorBlack);
+      box-shadow: 0 2px 0 0 var(--colorBlack);
+    /*border-bottom: 2px solid var(--colorBlack);*/
   }
 
   100% {
-    border-bottom: 2px solid transparent;
+      box-shadow: 0 2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
   }
 }
 
@@ -290,11 +291,13 @@ footer {
 
 @keyframes burgerClose {
   0% {
-    border-bottom: 2px solid var(--colorBlack);
+      box-shadow: 0 2px 0 0 var(--colorBlack);
+    /*border-bottom: 2px solid var(--colorBlack);*/
   }
 
   100% {
-    border-bottom: 2px solid transparent;
+      box-shadow: 0 2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
   }
 }
 

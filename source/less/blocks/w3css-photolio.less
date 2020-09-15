@@ -20,16 +20,25 @@ body.w3css-photolio {
   text-decoration: none;
 }
 
-.w3css-photolio .usr-burger {
-  width: 60px;
-  height: 30px;
+.w3css-photolio img {
+  width: 100%;
+  height: auto;
+}
 
-  border-bottom: 4px solid var(--colorGrey);
+.w3css-photolio .w3-content {
+  max-width: 1500px;
+}
+
+.w3css-photolio .usr-burger {
+  width: 50px;
+  height: 20px;
+
+  box-shadow: 0 3px 0 0 var(--colorGrey);
 
 
   &::before,
   &::after {
-    height: 4px;
+    height: 3px;
 
     background-color: var(--colorGrey);
   }
