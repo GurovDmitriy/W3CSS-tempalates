@@ -10,5 +10,5 @@ burger.onclick = function () {
     burger.classList.add('usr-burger--open');
   }
 
-  menu.classList.toggle('w3-hide-small');
+  menu.classList.toggle('usr-hidden');
 }
