@@ -7,6 +7,13 @@
   font-display: swap;
 }
 @font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/woff2/Raleway-VariableFont_wght.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: 'Montserrat';
   src: url('../fonts/woff2/Montserrat-Regular.woff2') format('woff2-variations');
   font-weight: 400;
@@ -526,9 +533,13 @@ body.w3css-photolio {
   outline: 2px solid var(--colorGrey);
 }
 body.w3css-photographer {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+.w3css-photographer h1 {
+  font-weight: 350;
 }
 .w3css-photographer header p {
+  font-weight: 300;
   text-transform: uppercase;
 }
 .w3css-photographer img {
