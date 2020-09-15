@@ -61,6 +61,18 @@ body.w3css-jane-bloglife .usr-main-caption {
   padding-top: 16px;
 }
 
+.w3css-jane-bloglife .w3-button.w3-mobile {
+  margin-bottom: 16px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @tabletWidth) {
+    margin-bottom: 0;
+  }
+}
+
 .w3css-jane-bloglife .usr-inspiration .w3-col {
   margin-bottom: 16px;
 }
@@ -79,19 +91,11 @@ body.w3css-jane-bloglife .usr-main-caption {
   text-transform: uppercase;
 }
 
-.js-focus-visible .w3css-jane-bloglife header .focus-visible {
-  .focusCustom(var(--colorWhite));
+
+.js-focus-visible .w3css-jane-bloglife .focus-visible {
+  .focusCustom(var(--colorRed));
 }
 
-.js-focus-visible .w3css-jane-bloglife .w3-modal .focus-visible {
-  .focusCustom(var(--colorBlack));
-}
-
-.js-focus-visible .w3css-jane-bloglife .usr-modal-btn-close.focus-visible {
-  .focusCustom(var(--colorWhite));
-  outline-offset: -2px;
-}
-
-.js-focus-visible .w3css-jane-bloglife nav .focus-visible {
+.js-focus-visible .w3css-jane-bloglife .w3-bar .focus-visible {
   outline-offset: -2px;
 }
