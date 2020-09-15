@@ -552,3 +552,6 @@ body.w3css-photographer {
 .js-focus-visible .w3css-photographer .focus-visible {
   outline: 2px solid var(--colorGrey);
 }
+.js-focus-visible .w3css-photographer nav .focus-visible {
+  outline-offset: -2px;
+}
