@@ -555,3 +555,20 @@ body.w3css-photographer {
 .js-focus-visible .w3css-photographer nav .focus-visible {
   outline-offset: -2px;
 }
+.w3css-photographer-2 header p,
+.w3css-photographer-2 h1 {
+  text-transform: uppercase;
+}
+.w3css-photographer-2 img {
+  width: 100%;
+  height: auto;
+}
+.w3css-photographer-2 header.w3-content {
+  max-width: 1500px;
+}
+.js-focus-visible .w3css-photographer-2 .focus-visible {
+  outline: 2px solid var(--colorGrey);
+}
+.js-focus-visible .w3css-photographer-2 nav .focus-visible {
+  outline-offset: -2px;
+}
