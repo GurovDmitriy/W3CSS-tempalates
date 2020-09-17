@@ -46,6 +46,7 @@
   /* переменные цвета */
   --colorWhite: #ffffff;
   --colorBlack: #000000;
+  --colorBlack2: #222222;
   --colorGrey: #757575;
   --colorRed: #f44336;
 }
@@ -582,4 +583,39 @@ body.w3css-photographer {
 }
 .js-focus-visible .w3css-photographer-2 nav .focus-visible {
   outline-offset: -2px;
+}
+body.w3css-web-designer {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.w3css-web-designer h1,
+.w3css-web-designer h2,
+.w3css-web-designer h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+.w3css-web-designer p {
+  color: var(--colorGrey);
+}
+.w3css-web-designer img {
+  width: 100%;
+  height: auto;
+}
+.w3css-web-designer nav {
+  width: 120px;
+  background-color: var(--colorBlack2);
+}
+.w3css-web-designer nav a {
+  text-transform: uppercase;
+}
+.w3css-web-designer main,
+.w3css-web-designer footer {
+  margin-left: 120px;
+}
+.w3css-web-designer .w3-jumbo {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.w3css-web-designer hr {
+  width: 200px;
 }
