@@ -619,3 +619,24 @@ body.w3css-web-designer {
 .w3css-web-designer hr {
   width: 200px;
 }
+.w3css-web-designer .usr-bar .w3-grey {
+  height: 24px;
+}
+.w3css-web-designer .usr-bar:nth-of-type(1) .w3-grey {
+  width: 90%;
+}
+.w3css-web-designer .usr-bar:nth-of-type(2) .w3-grey {
+  width: 80%;
+}
+.w3css-web-designer .usr-bar:nth-of-type(3) .w3-grey {
+  width: 70%;
+}
+.w3css-web-designer .usr-review li {
+  border: none;
+}
+.w3css-web-designer .usr-review img {
+  width: 80px;
+}
+.w3css-web-designer form button {
+  text-transform: uppercase;
+}
