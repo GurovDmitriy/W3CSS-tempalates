@@ -367,6 +367,7 @@ footer {
 }
 @media (min-width: 601px) {
   .w3css-gourment-catering .usr-menu {
+    display: block;
     width: auto;
   }
 }

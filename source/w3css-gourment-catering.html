@@ -51,7 +51,7 @@
 
       <a class="w3-bar-item w3-button usr-navbrand" href="#">Gourmet Catering</a>
 
-      <div class="w3-right w3-hide-small w3-animate-opacity usr-menu">
+      <div class="w3-right w3-animate-opacity usr-menu usr-hidden">
         <a class="w3-bar-item w3-button w3-mobile" href="#about">About</a>
         <a class="w3-bar-item w3-button w3-mobile" href="#menu">Menu</a>
         <a class="w3-bar-item w3-button w3-mobile" href="#contact">Contact</a>
@@ -78,7 +78,7 @@
 
   <main class="w3-content" id="main">
 
-    <section class="w3-row w3-padding-64">
+    <section class="w3-row w3-padding-64" id="about">
 
       <div class="w3-col w3-padding m6 w3-hide-small">
         <picture>
@@ -90,7 +90,7 @@
       </div>
 
       <div class="w3-col w3-padding m6">
-        <h2 class="w3-center w3-wide" id="about" tabindex="0">About catering</h2>
+        <h2 class="w3-center w3-wide" tabindex="0">About catering</h2>
         <p class="w3-center w3-wide">Tradition since 1889</p>
         <p>Co-create but shine energize resist; entrepreneur issue outcomes communities. Save the world philanthropy; change-makers low-hanging fruit low-hanging fruit effective altruism do-gooder. Overcome injustice changemaker; impact bandwidth inspire, social impact inspire social enterprise. Framework global; compassion because, movements; segmentation policymaker entrepreneur, when uplift white paper, greenwashing social <mark class="w3-tag w3-light-grey">entrepreneur</mark> families activate policymaker.</p>
         <p class="w3-text-grey w3-hide-medium">Black lives matter triple bottom line activate social innovation to. Citizen-centered triple bottom line justice revolutionary peaceful humanitarian engaging green space. Collaborative cities living a.</p>
@@ -100,10 +100,10 @@
 
     <hr>
 
-    <section class="w3-row w3-padding-64">
+    <section class="w3-row w3-padding-64" id="menu">
 
       <div class="w3-col l6">
-        <h2 class="w3-center w3-wide" id="menu" tabindex="0">Our menu</h2>
+        <h2 class="w3-center w3-wide" tabindex="0">Our menu</h2>
 
         <div class="w3-responsive">
           <table class="w3-table">
@@ -160,8 +160,8 @@
 
     <hr>
 
-    <section class="w3-container w3-padding-64">
-      <h2 class="w3-wide" id="contact" tabindex="0">Contact</h2>
+    <section class="w3-container w3-padding-64" id="contact">
+      <h2 class="w3-wide" tabindex="0">Contact</h2>
 
       <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
 
@@ -212,6 +212,7 @@
   </footer>
 
   <script src="js/default.js"       async></script>
+  <script src="js/catering.js"      async></script>
   <script src="js/focus-visible.js" async></script>
 
 </body>
