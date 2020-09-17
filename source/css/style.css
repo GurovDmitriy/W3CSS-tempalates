@@ -559,11 +559,22 @@ body.w3css-photographer {
 .w3css-photographer-2 h1 {
   text-transform: uppercase;
 }
+.w3css-photographer-2 nav {
+  position: static;
+  transform: translate(0, 0);
+}
+@media (min-width: 601px) {
+  .w3css-photographer-2 nav {
+    position: absolute;
+    transform: translate(-50%, 50%);
+  }
+}
 .w3css-photographer-2 img {
   width: 100%;
   height: auto;
 }
 .w3css-photographer-2 header.w3-content {
+  width: 100%;
   max-width: 1500px;
 }
 .js-focus-visible .w3css-photographer-2 .focus-visible {

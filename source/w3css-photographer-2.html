@@ -42,25 +42,105 @@
 
   <header class="w3-content">
 
-    <div>
-      <h1>Jane Doe</h1>
-      <p class="w3-xlarge">Photographer</p>
-    </div>
-
-
-    <nav class="w3-container w3-padding-64 w3-center">
-      <h2 class="visually-hidden">Navigation</h2>
+    <div class="w3-display-container">
       <a class="skip-link" href="#main">skip-link</a>
-      <div class="w3-bar w3-text-grey w3-border">
-        <a class="w3-bar-item w3-button w3-hover-text-grey" href="#">Home</a>
-        <a class="w3-bar-item w3-button w3-hover-text-grey w3-light-grey w3-text-grey" href="#">Portfolio</a>
-        <a class="w3-bar-item w3-button w3-hover-text-grey" href="#">Contact</a>
+      <picture>
+        <source type="image/webp"
+                media="(min-width: 601px)"
+                srcset="image/min/photographer.webp">
+
+        <source type="image/webp"
+                srcset="image/min/photographer-mobile.webp">
+
+        <source type="image/jpg"
+                media="(min-width: 601px)"
+                srcset="image/min/photographer.jpg">
+
+        <img class="w3-image" src="image/min/photographer-mobile.jpg" width="480" height="600" alt="Photographer Jane">
+      </picture>
+      <div class="w3-display-middle w3-center w3-padding-large w3-text-white w3-wide w3-border w3-border-white">
+        <h1 class="w3-xxxlarge">Jane Doe</h1>
+        <p class="w3-xlarge">Photographer</p>
       </div>
-    </nav>
+      <nav class="w3-container w3-display-bottommiddle">
+        <h2 class="visually-hidden">Navigation</h2>
+        <div class="w3-bar w3-light-grey">
+          <a class="w3-bar-item w3-button w3-mobile" href="#">Home</a>
+          <a class="w3-bar-item w3-button w3-mobile" href="#">Portfolio</a>
+          <a class="w3-bar-item w3-button w3-mobile" href="#">Contact</a>
+        </div>
+      </nav>
+    </div>
 
   </header>
 
-  <main class="w3-content" id="main">
+  <main class="w3-content w3-padding-32" id="main">
+
+    <section>
+      <h2 class="visually-hidden">Gallery</h2>
+      <div class="w3-margin-bottom">
+        <picture>
+          <source type="image/webp"
+                  srcset="image/min/ocean.webp">
+
+          <img class="w3-image" src="image/min/ocean.jpg" width="1000" height="500" alt="Photographer Jane">
+        </picture>
+      </div>
+      <div class="w3-margin-bottom">
+        <picture>
+          <source type="image/webp"
+                  srcset="image/min/ocean2.webp">
+
+          <img class="w3-image" src="image/min/ocean2.jpg" width="1000" height="500" alt="Photographer Jane">
+        </picture>
+      </div>
+      <div class="w3-margin-bottom">
+        <picture>
+          <source type="image/webp"
+                  srcset="image/min/falls2.webp">
+
+          <img class="w3-image" src="image/min/falls2.jpg" width="1000" height="500" alt="Photographer Jane">
+        </picture>
+      </div>
+      <div class="w3-margin-bottom">
+        <picture>
+          <source type="image/webp"
+                  srcset="image/min/mountainskies.webp">
+
+          <img class="w3-image" src="image/min/mountainskies.jpg" width="1000" height="500" alt="Photographer Jane">
+        </picture>
+      </div>
+      <div class="w3-margin-bottom">
+        <picture>
+          <source type="image/webp"
+                  srcset="image/min/mountains2.webp">
+
+          <img class="w3-image" src="image/min/mountains2.jpg" width="1000" height="500" alt="Photographer Jane">
+        </picture>
+      </div>
+    </section>
+
+    <section class="w3-container w3-padding-32 w3-light-grey">
+      <h2 class="w3-center">Contact</h2>
+      <p>Storytelling human-centered living a fully ethical life program areas B-corp change-makers venture philanthropy. Impact investing; framework; triple bottom line living a fully ethical life co-create corporate social responsibility expose the truth ideate leverage. Society agile inclusion technology, issue outcomes; shine paradigm but. Inspiring revolutionary agile replicable, initiative scalable citizen-centered, rubric.</p>
+      <form action="#" method="post">
+        <div class="w3-section">
+          <label for="name">Name</label>
+          <input class="w3-input w3-border" id="name" type="text" name="name" required>
+        </div>
+        <div class="w3-section">
+          <label for="email">Email</label>
+          <input class="w3-input w3-border" id="email" type="email" name="email" required>
+        </div>
+        <div class="w3-section">
+          <label for="message">Message</label>
+          <textarea class="w3-input w3-border" id="message" name="message" rows="1" required></textarea>
+        </div>
+        <div class="w3-section">
+          <button class="w3-button w3-block w3-grey w3-text-white" type="submit">Send</button>
+        </div>
+      </form>
+    </section>
 
   </main>
 
