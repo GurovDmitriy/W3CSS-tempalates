@@ -21,6 +21,7 @@
   <link rel="preload" href="css/style.css"                                    as="style">
 
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
 
   <link rel="apple-touch-icon"                      sizes="180x180" href="image/favicon/apple-touch-icon.png">
@@ -41,14 +42,224 @@
 
 <body class="w3css-web-designer">
 
-  <header>
+  <header class="w3-content">
 
     <h1>I'm John Doe.</h1>
     <p>Photographer and Web Designer.</p>
 
+    <picture>
+      <source type="image/webp"
+              srcset="image/min/man_smoke.webp">
+
+      <img class="w3-image" src="image/min/man_smoke.jpg" width="992" height="1108">
+    </picture>
+
+    <nav>
+      <h2 class="visually-hidden">Navigation</h2>
+      <div class="">
+        <a href="#"><span></span> Home</a>
+        <a href="#"><span></span> About</a>
+        <a href="#"><span></span> Photos</a>
+        <a href="#"><span></span> Contact</a>
+      </div>
+    </nav>
+
   </header>
 
   <main class="w3-content" id="main">
+
+    <section>
+      <h2>My name</h2>
+      <p>Boots on the ground efficient cultivate B-corp improve the world accessibility. Movements catalyze; inspire, milestones thought partnership impact unprecedented challenge human-centered mobilize. Gender rights relief; paradigm, issue outcomes sustainable problem-solvers. Strengthening infrastructure program area indicators radical disrupt milestones triple bottom line relief systems thinking. Benefit corporation outcomes, initiative social capital.</p>
+    </section>
+
+    <section>
+      <h2>My Skills</h2>
+
+      <label for="photography">Photography</label>
+      <progress id="photography" value="90" max="100"></progress>
+
+      <label for="webdesign">Web Design</label>
+      <progress id="webdesign" value="80" max="100"></progress>
+
+      <label for="photoshop">Photoshop</label>
+      <progress id="photoshop" value="70" max="100"></progress>
+
+      <div class="">
+        <div class="">
+          <p>11+</p>
+          <p>Partners</p>
+        </div>
+        <div class="">
+          <p>55+</p>
+          <p>Projects done</p>
+        </div>
+        <div class="">
+          <p>89+</p>
+          <p>Happy clients</p>
+        </div>
+        <div class="">
+          <p>150+</p>
+          <p>Meetings</p>
+        </div>
+      </div>
+
+      <button type="button"><span></span> Download resume</button>
+    </section>
+
+    <section>
+      <h2>My prise</h2>
+
+      <div class="">
+        <div class="">
+          <h3>Basic</h3>
+          <ul>
+            <li>Web Design</li>
+            <li>Photography</li>
+            <li>5GB Storage</li>
+            <li>Mail Support</li>
+          </ul>
+          <p>&#36;10</p>
+          <p>per month</p>
+          <button type="button">Sign up</button>
+        </div>
+        <div class="">
+          <h3>Pro</h3>
+          <ul>
+            <li>Web Design</li>
+            <li>Photography</li>
+            <li>5GB Storage</li>
+            <li>Mail Support</li>
+          </ul>
+          <p>&#36;25</p>
+          <p>per month</p>
+          <button type="button">Sign up</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>My reputation</h2>
+      <ul>
+        <li>
+          <picture>
+            <source type="image/webp"
+                    srcset="image/min/bandmember.webp">
+
+            <img class="w3-image" src="image/min/bandmember.jpg" width="255" height="255">
+          </picture>
+          <p>Chris Fox. CEO at Mighty Schools.</p>
+          <p>John Doe saved us from a web disaster.</p>
+        </li>
+        <li>
+          <picture>
+            <source type="image/webp"
+                    srcset="image/min/bandmember.webp">
+
+            <img class="w3-image" src="image/min/bandmember.jpg" width="255" height="255">
+          </picture>
+          <p>Chris Fox. CEO at Mighty Schools.</p>
+          <p>John Doe saved us from a web disaster.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>My photos</h2>
+
+      <div class="">
+
+        <div class="">
+          <picture>
+            <source type="image/webp"
+                    srcset="image/min/wedding.webp">
+
+            <img class="w3-image" src="image/min/wedding.jpg" width="800" height="500">
+          </picture>
+          <picture>
+            <source type="image/webp"
+                    srcset="image/min/rocks.webp">
+
+            <img class="w3-image" src="image/min/rocks.jpg" width="500" height="850">
+          </picture>
+          <picture>
+            <source type="image/webp"
+                    srcset="image/min/sailboat.webp">
+
+            <img class="w3-image" src="image/min/sailboat.jpg" width="2500" height="1665">
+          </picture>
+        </div>
+
+        <div class="">
+          <picture>
+            <source type="image/webp"
+                    srcset="image/min/underwater.webp">
+
+            <img class="w3-image" src="image/min/underwater.jpg" width="800" height="800">
+          </picture>
+          <picture>
+            <source type="image/webp"
+                    srcset="image/min/chef.webp">
+
+            <img class="w3-image" src="image/min/chef.jpg" width="0" height="0">
+          </picture>
+          <picture>
+            <source type="image/webp"
+                    srcset="image/min/wedding.webp">
+
+            <img class="w3-image" src="image/min/wedding.jpg" width="800" height="500">
+          </picture>
+          <picture>
+            <source type="image/webp"
+                    srcset="image/min/p6.webp">
+
+            <img class="w3-image" src="image/min/p6.jpg" width="400" height="300">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact Me</h2>
+      <address>Chicago, US</address>
+      <p><a href="tel:+00 151515">+00 151515</a></p>
+      <p><a href="mailto:mail@mail.gmail.com">mail@mail.gmail.com</a></p>
+
+      <form action="#" method="post">
+        <p>Let's get in touch. Send me a message:</p>
+        <div class="w3-section">
+          <label class="visually-hidden" for="name">Name</label>
+          <input class="" id="name" type="text" name="name" required placeholder="Name">
+        </div>
+        <div class="w3-section">
+          <label class="visually-hidden" for="email">Email</label>
+          <input class="" id="email" type="email" name="email" required placeholder="Email">
+        </div>
+        <div class="w3-section">
+          <label class="visually-hidden" for="subject">Subject</label>
+          <input class="" id="subject" type="text" name="subject" required placeholder="Subject">
+        </div>
+        <div class="w3-section">
+          <label class="visually-hidden" for="message">Message</label>
+          <textarea class="" id="message" name="message" rows="1" required></textarea>
+        </div>
+        <div class="w3-section">
+          <button class="" type="submit">Send</button>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <h2 class="visually-hidden">Social</h2>
+      <div class="">
+        <a class="w3-button" href="#"><span class="visually-hidden">facebook</span><span class="fa fa-facebook-official"></span></a>
+        <a class="w3-button" href="#"><span class="visually-hidden">instagramm</span><span class="fa fa-instagram"></span></a>
+        <a class="w3-button" href="#"><span class="visually-hidden">snapchat</span><span class="fa fa-snapchat"></span></a>
+        <a class="w3-button" href="#"><span class="visually-hidden">twitter</span><span class="fa fa-twitter"></span></a>
+        <a class="w3-button" href="#"><span class="visually-hidden">pinterest</span><span class="fa fa-pinterest-p"></span></a>
+        <a class="w3-button" href="#"><span class="visually-hidden">linkedin</span><span class="fa fa-linkedin"></span></a>
+      </div>
+    </section>
 
   </main>
 
