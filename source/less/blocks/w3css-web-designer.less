@@ -21,7 +21,17 @@ body.w3css-web-designer {
 
 .w3css-web-designer nav {
   width: 120px;
+  z-index: 3;
+
   background-color: var(--colorBlack2);
+
+  @media (min-width: @tabletWidth) {
+    display: block;
+  }
+}
+
+.w3css-web-designer .w3-overlay {
+  background-color: rgba(0,0,0,0.9);
 }
 
 .w3css-web-designer nav a {
@@ -30,7 +40,11 @@ body.w3css-web-designer {
 
 .w3css-web-designer main,
 .w3css-web-designer footer, {
-  margin-left: 120px;
+  margin-left: 0;
+
+  @media (min-width: @tabletWidth) {
+    margin-left: 120px;
+  }
 }
 
 .w3css-web-designer .w3-jumbo {
@@ -58,6 +72,18 @@ body.w3css-web-designer {
   width: 70%;
 }
 
+.w3css-web-designer .usr-price .w3-col {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @tabletWidth) {
+    margin-bottom: 0;
+  }
+}
+
 .w3css-web-designer .usr-review li {
   border: none;
 }
@@ -68,5 +94,40 @@ body.w3css-web-designer {
 
 .w3css-web-designer form button {
   text-transform: uppercase;
+}
+.w3css-web-designer .usr-burger {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+
+  width: 50px;
+  height: 20px;
+
+  box-shadow: 0 3px 0 0 var(--colorGrey);
+
+
+  &::before,
+  &::after {
+    height: 3px;
+
+    background-color: var(--colorGrey);
+  }
+
+  @media (min-width: @tabletWidth) {
+    display: none;
+  }
+}
+
+.js-focus-visible .w3css-web-designer .focus-visible {
+  .focusCustom(var(--colorWhite));
+}
+
+.js-focus-visible .w3css-web-designer input.focus-visible,
+.js-focus-visible .w3css-web-designer textarea.focus-visible {
+  outline-offset: 2px;
+}
+
+.js-focus-visible .w3css-web-designer nav .focus-visible {
+  outline-offset: -2px;
 }
 

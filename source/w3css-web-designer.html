@@ -46,26 +46,33 @@
 
     <h1 class="visually-hidden">I'm John Doe.</h1>
 
-    <nav class="w3-sidebar w3-bar-block w3-center">
+    <button class="usr-burger" type="button"><span class="visually-hidden">Menu</span></button>
+
+    <nav class="w3-sidebar w3-bar-block w3-center usr-menu usr-hidden w3-animate-left">
       <h2 class="visually-hidden">Navigation</h2>
+      <a class="skip-link" href="#main">Skip to main</a>
       <picture>
         <source type="image/webp"
                 srcset="image/min/avatar_smoke.webp">
 
         <img class="w3-image" src="image/min/avatar_smoke.jpg" width="200" height="223">
       </picture>
-      <a class="w3-bar-item w3-button w3-hover-black w3-black w3-padding-large" href="#"><span class="fa fa-home w3-xxlarge"></span> <p class="w3-text-white">Home</p></a>
+      <a class="w3-bar-item w3-button w3-hover-black w3-padding-large" href="#home"><span class="fa fa-home w3-xxlarge"></span> <p class="w3-text-white">Home</p></a>
       <a class="w3-bar-item w3-button w3-hover-black w3-padding-large" href="#about"><span class="fa fa-user w3-xxlarge"></span> <p class="w3-text-white">About</p></a>
       <a class="w3-bar-item w3-button w3-hover-black w3-padding-large" href="#photos"><span class="fa fa-eye w3-xxlarge"></span> <p class="w3-text-white">Photos</p></a>
       <a class="w3-bar-item w3-button w3-hover-black w3-padding-large" href="#contact"><span class="fa fa-envelope w3-xxlarge"></span> <p class="w3-text-white">Contact</p></a>
     </nav>
 
+    <div class="w3-overlay w3-animate-opacity"></div>
+
   </header>
 
   <main id="main">
 
-    <div class="w3-content w3-container w3-center w3-padding-64">
-      <p class="w3-jumbo w3-text-white">I'm John Doe.</p>
+
+
+    <section class="w3-content w3-container w3-center w3-padding-64" id="home">
+      <p class="w3-jumbo w3-text-white" tabindex="0">I'm John Doe.</p>
       <p class="w3-text-white">Photographer and Web Designer.</p>
 
       <picture>
@@ -74,16 +81,16 @@
 
         <img class="w3-image" src="image/min/man_smoke.jpg" width="992" height="1108">
       </picture>
-    </div>
+    </section>
 
-    <section class="w3-content w3-container w3-padding-16">
-      <h2 id="about">My name</h2>
+    <section class="w3-content w3-container w3-padding-16" id="about">
+      <h2 tabindex="0">My name</h2>
       <hr class="w3-opacity">
       <p>Boots on the ground efficient cultivate B-corp improve the world accessibility. Movements catalyze; inspire, milestones thought partnership impact unprecedented challenge human-centered mobilize. Gender rights relief; paradigm, issue outcomes sustainable problem-solvers. Strengthening infrastructure program area indicators radical disrupt milestones triple bottom line relief systems thinking. Benefit corporation outcomes, initiative social capital.</p>
     </section>
 
     <section class="w3-content w3-container w3-padding-16">
-      <h2 class="w3-xlarge">My Skills</h2>
+      <h2 class="w3-xlarge" tabindex="0">My Skills</h2>
 
       <p class="w3-wide"><label for="photography">Photography</label></p>
       <progress class="visually-hidden" id="photography" value="90" max="100"></progress>
@@ -122,18 +129,18 @@
         </div>
       </div>
 
-      <button class="w3-button w3-padding-large w3-light-grey" type="button"><span class="fa fa-download"></span> Download resume</button>
+      <button class="w3-button w3-mobile w3-padding-large w3-light-grey" type="button"><span class="fa fa-download"></span> Download resume</button>
     </section>
 
-    <section class="w3-content w3-padding-16">
+    <section class="w3-content w3-padding-16 usr-price">
       <div class="w3-container">
-        <h2 class="w3-xlarge">My prise</h2>
+        <h2 class="w3-xlarge" tabindex="0">My prise</h2>
       </div>
 
       <div class="w3-row-padding w3-center">
         <div class="w3-col m6 w3-opacity w3-hover-opacity-off">
           <div class="w3-padding-32 w3-grey">
-            <h3>Basic</h3>
+            <h3 tabindex="0">Basic</h3>
           </div>
           <ul class="w3-ul w3-white">
             <li class="w3-padding-16">Web Design</li>
@@ -150,7 +157,7 @@
         </div>
         <div class="w3-col m6 w3-opacity w3-hover-opacity-off">
           <div class="w3-padding-32 w3-grey">
-            <h3>Pro</h3>
+            <h3 tabindex="0">Pro</h3>
           </div>
           <ul class="w3-ul w3-white">
             <li class="w3-padding-16">Web Design</li>
@@ -170,7 +177,7 @@
 
     <section class="w3-content w3-padding-16">
       <div class="w3-container">
-        <h2 class="w3-xlarge">My reputation</h2>
+        <h2 class="w3-xlarge" tabindex="0">My reputation</h2>
       </div>
       <ul class="w3-ul usr-review">
         <li>
@@ -196,9 +203,9 @@
       </ul>
     </section>
 
-    <section class="w3-content w3-padding-16">
+    <section class="w3-content w3-padding-16" id="photos">
       <div class="w3-container">
-        <h2 id="photos">My photos</h2>
+        <h2 tabindex="0">My photos</h2>
         <hr class="w3-opacity">
       </div>
 
@@ -254,9 +261,9 @@
       </div>
     </section>
 
-    <section class="w3-content w3-padding-16">
+    <section class="w3-content w3-padding-16" id="contact">
       <div class="w3-container">
-        <h2 id="contact">Contact Me</h2>
+        <h2 tabindex="0">Contact Me</h2>
         <hr class="w3-opacity">
         <address class="w3-text-grey"><span class="fa fa-map-marker fa-fw w3-margin-right w3-text-white w3-xxlarge"></span>Chicago, US</address>
         <p><a href="tel:+00 151515"><span class="fa fa-phone fa-fw w3-margin-right w3-text-white w3-xxlarge"></span> +00 151515</a></p>
@@ -282,12 +289,12 @@
           <textarea class="w3-input w3-padding-16" id="message" name="message" rows="1" required placeholder="Message"></textarea>
         </div>
         <div class="w3-section">
-          <button class="w3-button w3-white w3-padding-16" type="submit"><span class="fa fa-paper-plane w3-margin-right"></span> Send message</button>
+          <button class="w3-button w3-mobile w3-white w3-padding-16" type="submit"><span class="fa fa-paper-plane w3-margin-right"></span> Send message</button>
         </div>
       </form>
     </section>
 
-    <section class="w3-content w3-container w3-padding-16">
+    <section class="w3-content w3-container w3-center w3-padding-16">
       <h2 class="visually-hidden">Social</h2>
       <div class="w3-xlarge">
         <a class="w3-text-grey w3-hover-opacity w3-margin-right" href="#"><span class="visually-hidden">facebook</span><span class="fa fa-facebook-official"></span></a>
@@ -315,6 +322,7 @@
 
   </footer>
 
+  <script src="js/webdesigner.js"   async></script>
   <script src="js/focus-visible.js" async></script>
 
 </body>
