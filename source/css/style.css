@@ -719,31 +719,83 @@ body.w3css-interior-design {
 .w3css-interior-design h3 {
   font-family: 'Poppins', sans-serif;
 }
+.w3css-interior-design h1,
+.w3css-interior-design h2 {
+  font-weight: 700;
+}
 .w3css-interior-design img {
   width: 100%;
   height: auto;
 }
 .w3css-interior-design hr {
-  width: 200px;
+  height: 10px;
+  width: 50px;
 }
-.w3css-interior-design .usr-price .w3-col {
-  margin-bottom: 16px;
-}
-.w3css-interior-design .usr-price .w3-col:last-child {
+.w3css-interior-design .w3-jumbo {
+  margin-top: 0;
   margin-bottom: 0;
+  font-weight: 700;
+}
+.w3css-interior-design nav {
+  width: 200px;
+  z-index: 3;
+  font-weight: 700;
 }
 @media (min-width: 601px) {
-  .w3css-interior-design .usr-price .w3-col {
-    margin-bottom: 0;
+  .w3css-interior-design nav {
+    display: block;
+  }
+}
+.w3css-interior-design .w3-overlay {
+  background-color: rgba(244, 67, 54, 0.5);
+}
+@media (min-width: 601px) {
+  .w3css-interior-design .w3-overlay {
+    display: none;
+  }
+}
+.w3css-interior-design main,
+.w3css-interior-design footer {
+  margin-left: 0;
+}
+@media (min-width: 601px) {
+  .w3css-interior-design main,
+  .w3css-interior-design footer {
+    margin-left: 200px;
+  }
+}
+.w3css-interior-design .usr-burger {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 50px;
+  height: 20px;
+  box-shadow: 0 3px 0 0 var(--colorRed);
+}
+.w3css-interior-design .usr-burger::before,
+.w3css-interior-design .usr-burger::after {
+  height: 3px;
+  background-color: var(--colorRed);
+}
+@media (min-width: 601px) {
+  .w3css-interior-design .usr-burger {
+    display: none;
   }
 }
 .js-focus-visible .w3css-interior-design .focus-visible {
-  outline: 2px solid var(--colorWhite);
+  outline: 2px solid var(--colorRed);
 }
 .js-focus-visible .w3css-interior-design input.focus-visible,
 .js-focus-visible .w3css-interior-design textarea.focus-visible {
   outline-offset: 2px;
 }
 .js-focus-visible .w3css-interior-design nav .focus-visible {
+  outline: 2px solid var(--colorWhite);
   outline-offset: -2px;
+}
+.js-focus-visible .w3css-interior-design .usr-price .w3-red > h3.focus-visible {
+  outline: 2px solid var(--colorWhite);
+}
+.js-focus-visible .w3css-interior-design nav .w3-white.focus-visible {
+  outline: 2px solid var(--colorBlack);
 }

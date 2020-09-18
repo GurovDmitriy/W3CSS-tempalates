@@ -46,69 +46,79 @@
 
     <h1 class="visually-hidden">Interior Design</h1>
 
-    <nav >
+    <button class="usr-burger" type="button"><span class="visually-hidden">Menu</span></button>
+    <a class="skip-link w3-white w3-text-red" href="#main">Skip to Main</a>
+
+    <nav class="w3-sidebar w3-red usr-menu usr-hidden w3-animate-left">
       <h2 class="visually-hidden">Navigation.</h2>
-      <a href="#home">Home</a>
-      <a href="#showcase">Showcase</a>
-      <a href="#services">Services</a>
-      <a href="#designers">Designers</a>
-      <a href="#packages">Packages</a>
-      <a href="#contact">Contact</a>
+      <div class="w3-container w3-padding-32"><a class="w3-xlarge">Company Name</a></div>
+      <div class="w3-bar-block w3-large">
+        <a class="w3-bar-item w3-button w3-hover-white w3-hover-text-black" href="#home">Home</a>
+        <a class="w3-bar-item w3-button w3-hover-white w3-hover-text-black" href="#showcase">Showcase</a>
+        <a class="w3-bar-item w3-button w3-hover-white w3-hover-text-black" href="#services">Services</a>
+        <a class="w3-bar-item w3-button w3-hover-white w3-hover-text-black" href="#designers">Designers</a>
+        <a class="w3-bar-item w3-button w3-hover-white w3-hover-text-black" href="#packages">Packages</a>
+        <a class="w3-bar-item w3-button w3-hover-white w3-hover-text-black" href="#contact">Contact</a>
+      </div>
     </nav>
+
+    <div class="w3-overlay w3-animate-opacity"></div>
 
   </header>
 
-  <main class="w3-content" id="main">
+  <main id="main">
 
-    <section class="w3-container" id="home">
-      <p>Interior Design</p>
+    <section class="w3-content w3-container w3-padding-64" id="home">
+      <p class="w3-jumbo" tabindex="0">Interior Design</p>
     </section>
 
-    <section class="w3-container" id="showcase">
-      <h2>Showcase.</h2>
-      <hr>
+    <section class="w3-content w3-padding-32" id="showcase">
+      <div class="w3-container">
+        <h2 class="w3-xxxlarge w3-text-red" tabindex="0">Showcase.</h2>
+        <hr class="w3-red w3-round-large">
+      </div>
 
-      <div class="row">
+      <div class="w3-row-padding">
 
-        <div class="w3-col m6">
+        <div class="w3-col l6">
           <picture>
             <source type="image/webp"
                     srcset="image/min/kitchenconcrete.webp">
 
-            <img class="w3-image" src="image/min/kitchenconcrete.jpg" width="700" height="578">
+            <img class="w3-image w3-margin-bottom" src="image/min/kitchenconcrete.jpg" width="700" height="578">
           </picture>
           <picture>
             <source type="image/webp"
                     srcset="image/min/livingroom.webp">
 
-            <img class="w3-image" src="image/min/livingroom.jpg" width="900" height="500">
+            <img class="w3-image w3-margin-bottom" src="image/min/livingroom.jpg" width="900" height="500">
           </picture>
           <picture>
             <source type="image/webp"
                     srcset="image/min/diningroom.webp">
 
-            <img class="w3-image" src="image/min/diningroom.jpg" width="900" height="500">
+            <img class="w3-image w3-margin-bottom" src="image/min/diningroom.jpg" width="900" height="500">
           </picture>
         </div>
 
-        <div class="w3-col m6">
+        <div class="w3-col l6">
           <picture>
             <source type="image/webp"
                     srcset="image/min/atrium.webp">
 
-            <img class="w3-image" src="image/min/atrium.jpg" width="700" height="578">
+            <img class="w3-image w3-margin-bottom" src="image/min/atrium.jpg" width="700" height="578">
           </picture>
           <picture>
             <source type="image/webp"
                     srcset="image/min/bedroom.webp">
 
-            <img class="w3-image" src="image/min/bedroom.jpg" width="900" height="500">
+            <img class="w3-image w3-margin-bottom" src="image/min/bedroom.jpg" width="900" height="500">
           </picture>
           <picture>
             <source type="image/webp"
                     srcset="image/min/livingroom2.webp">
 
-            <img class="w3-image" src="image/min/livingroom2.jpg.jpg" width="900" height="500">
+            <img class="w3-image w3-margin-bottom" src="image/min/livingroom2.jpg.jpg" width="900" height="500">
           </picture>
         </div>
 
@@ -116,24 +126,26 @@
 
     </section>
 
-    <section class="w3-container" id="services">
-      <h2>Services.</h2>
-      <hr>
+    <section class="w3-content w3-container w3-padding-32" id="services">
+      <h2 class="w3-xxxlarge w3-text-red" tabindex="0">Services.</h2>
+      <hr class="w3-red w3-round-large">
 
       <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
-      <p>But shared value policymaker empower communities, efficient movements progress emerging. Strategy global; design thinking; problem-solvers segmentation, green space silo and. Resist move the needle social enterprise, efficient, thought leadership relief co-creation movements. Big data because; NGO circular theory of change parse. Empower communities human-centered storytelling, cultivate empathetic. Then think tank.</p>
+      <p>To compelling social capital; compassion fairness. Co-creation energize problem-solvers greenwashing; empower communities philanthropy, think tank the leverage. Strategize justice living a fully ethical life venture philanthropy white paper outcomes impact. Greenwashing families impact invest, benefit corporation; state of play systems thinking shine. When, deep dive ideate, humanitarian; big data effective altruism. Invest; thought leadership equal opportunity, youth LGBTQ+, compassion, silo granular resist. Innovate empathetic, systems thinking policymaker B-corp. Social innovation inspiring empower communities collaborate thought partnership social entrepreneur engaging impact investing. Because green space, social capital benefit corporation milestones. Empower targeted social innovation initiative the resistance bandwidth outcomes. Global collaborative.</p>
     </section>
 
-    <section class="w3-container" id="designers">
-      <h2>Designers.</h2>
-      <hr>
+    <section class="w3-content w3-padding-32" id="designers">
+      <div class="w3-container">
+        <h2 class="w3-xxxlarge w3-text-red" tabindex="0">Designers.</h2>
+        <hr class="w3-red w3-round-large">
 
-      <p>The best team in the world.</p>
-      <p>Compassion; social impact venture philanthropy the preliminary thinking black lives matter improve the world. Equal opportunity outcomes, we must stand up do-gooder uplift strategize strengthening infrastructure parse. Philanthropy support incubator grit gender rights grit. Framework correlation sustainable, scale and impact B-corp. Revolutionary but, thought partnership, the resistance LGBTQ+. Technology strategy.</p>
-      <p><strong>Our designers are thoughtfully chosen:</strong></p>
+        <p>The best team in the world.</p>
+        <p>External partners, progress; co-create humanitarian change-makers indicators. Revolutionary paradigm, collaborate ecosystem issue outcomes entrepreneur inspiring. Disrupt framework improve the world invest effective. Social entrepreneur LGBTQ+ inclusion venture philanthropy a social impact when empathetic do-gooder. Inspire activate triple bottom line catalyze gender rights invest. Social capital gender rights, youth inspirational ecosystem; program areas living a fully ethical life natural resources problem-solvers. Correlation, targeted; innovate innovate, state of play indicators when. Scale and impact gender rights and, her body her rights preliminary thinking social return on investment challenges and opportunities resist contextualize. Her body her rights empower communities challenges and opportunities youth.</p>
+        <p><strong>Our designers are thoughtfully chosen:</strong></p>
+      </div>
 
-      <div class="row">
-        <div class="w3-col m4">
+      <div class="w3-row-padding">
+        <div class="w3-col l4 w3-margin-bottom">
           <figure>
             <picture>
               <source type="image/webp"
@@ -141,14 +153,14 @@
 
               <img class="w3-image" src="image/min/team2.jpg" width="500" height="333">
             </picture>
-            <figcaption>
-              <h3>John Doe</h3>
-              <p>CEO & Founder</p>
+            <figcaption class="w3-container w3-light-grey">
+              <h3 tabindex="0">John Doe</h3>
+              <p class="w3-text-grey">CEO & Founder</p>
               <p>Black lives matter NGO best practices empower issue outcomes. Correlation collective impact ecosystem; shared value unprecedented challenge social capital, empathetic.</p>
             </figcaption>
           </figure>
         </div>
-        <div class="w3-col m4">
+        <div class="w3-col l4 w3-margin-bottom">
           <figure>
             <picture>
               <source type="image/webp"
@@ -156,14 +168,14 @@
 
               <img class="w3-image" src="image/min/team1.jpg" width="500" height="333">
             </picture>
-            <figcaption>
-              <h3>John Doe</h3>
-              <p>CEO & Founder</p>
+            <figcaption class="w3-container w3-light-grey">
+              <h3 tabindex="0">John Doe</h3>
+              <p class="w3-text-grey">CEO & Founder</p>
               <p>Black lives matter NGO best practices empower issue outcomes. Correlation collective impact ecosystem; shared value unprecedented challenge social capital, empathetic.</p>
             </figcaption>
           </figure>
         </div>
-        <div class="w3-col m4">
+        <div class="w3-col l4 w3-margin-bottom">
           <figure>
             <picture>
               <source type="image/webp"
@@ -171,9 +183,9 @@
 
               <img class="w3-image" src="image/min/team3.jpg" width="500" height="333">
             </picture>
-            <figcaption>
-              <h3>John Doe</h3>
-              <p>CEO & Founder</p>
+            <figcaption class="w3-container w3-light-grey">
+              <h3 tabindex="0">John Doe</h3>
+              <p class="w3-text-grey">CEO & Founder</p>
               <p>Black lives matter NGO best practices empower issue outcomes. Correlation collective impact ecosystem; shared value unprecedented challenge social capital, empathetic.</p>
             </figcaption>
           </figure>
@@ -181,70 +193,72 @@
       </div>
     </section>
 
-    <section class="w3-container" id="packages">
-      <h2>Packages.</h2>
-      <hr>
+    <section class="w3-content w3-padding-32" id="packages">
+      <div class="w3-container">
+        <h2 class="w3-xxxlarge w3-text-red" tabindex="0">Packages.</h2>
+        <hr class="w3-red w3-round-large">
 
-      <p>But our work collaborative cities; justice humanitarian social innovation paradigm. Thought leader, agile social capital the inclusion bandwidth global movements. Policymaker when; impact investing bandwidth move the needle expose the truth capacity building. Thought partnership; co-create thought provoking sustainable social enterprise capacity building a. Outcomes, move the needle, leverage replicable.</p>
+        <p>Problem-solvers effective venture philanthropy, technology replicable greenwashing preliminary thinking. Collaborate youth leverage co-creation her body her rights; we must stand up support circular framework. Dynamic, activate global challenges and opportunities our work activate. Academic; collective impact; changemaker, theory of change contextualize storytelling because. Bandwidth social innovation, capacity building human-centered milestones rubric social capital. Bandwidth program area, movements society; sustainable, parse mass incarceration. Save the world citizen-centered, but; families leverage best practices efficient B-corp B-corp. Entrepreneur compassion to humanitarian deep dive correlation. Greenwashing; support paradigm activate black lives matter philanthropy, blended value social capital preliminary thinking. Indicators activate human-centered contextualize, but.</p>
+      </div>
 
-      <div class="w3-row">
-        <div class="w3-col m6">
-          <div class="w3-container">
-            <h3>Basic</h3>
+      <div class="w3-row-padding usr-price">
+        <div class="w3-col l6 w3-margin-bottom w3-center">
+          <div class="w3-container w3-padding-16 w3-dark-grey w3-text-white">
+            <h3 tabindex="0">Basic</h3>
           </div>
-          <ul class="w3-ul">
-            <li>Floorplanning</li>
-            <li>10 hours support</li>
-            <li>Photography</li>
-            <li>20% furniture discount</li>
-            <li>Good deals</li>
-            <li><p>$ 199</p><span>per room</span></li>
+          <ul class="w3-ul w3-light-grey">
+            <li class="w3-padding-large">Floorplanning</li>
+            <li class="w3-padding-large">10 hours support</li>
+            <li class="w3-padding-large">Photography</li>
+            <li class="w3-padding-large">20% furniture discount</li>
+            <li class="w3-padding-large">Good deals</li>
+            <li class="w3-padding-large"><p class="w3-xxlarge">$ 199</p><span class="w3-text-grey">per room</span></li>
+            <li class="w3-padding-32">
+              <button class="w3-button w3-white w3-large" type="button">Sign Up</button>
+            </li>
           </ul>
-          <div class="w3-container">
-            <button type="button">Sign Up</button>
-          </div>
         </div>
-        <div class="w3-col m6">
-          <div class="w3-container">
-            <h3>Pro</h3>
+        <div class="w3-col l6 w3-margin-bottom w3-center">
+          <div class="w3-container w3-padding-16 w3-red w3-text-white">
+            <h3 tabindex="0">Pro</h3>
           </div>
-          <ul class="w3-ul">
-            <li>Floorplanning</li>
-            <li>50 hours support</li>
-            <li>Photography</li>
-            <li>50% furniture discount</li>
-            <li>Great deals</li>
-            <li><p>$ 249</p><span>per room</span></li>
+          <ul class="w3-ul w3-light-grey">
+            <li class="w3-padding-large">Floorplanning</li>
+            <li class="w3-padding-large">50 hours support</li>
+            <li class="w3-padding-large">Photography</li>
+            <li class="w3-padding-large">50% furniture discount</li>
+            <li class="w3-padding-large">Great deals</li>
+            <li class="w3-padding-large"><p class="w3-xxlarge">$ 249</p><span class="w3-text-grey">per room</span></li>
+            <li class="w3-padding-32">
+              <button class="w3-button w3-red w3-large w3-text-white" type="button">Sign Up</button>
+            </li>
           </ul>
-          <div class="w3-container">
-            <button type="button">Sign Up</button>
-          </div>
         </div>
       </div>
 
     </section>
 
-    <section class="w3-container" id="Contact">
-      <h2>Contact.</h2>
-      <hr>
+    <section class="w3-content w3-container w3-padding-32" id="contact">
+      <h2 class="w3-xxxlarge w3-text-red" tabindex="0">Contact.</h2>
+      <hr class="w3-red w3-round-large">
 
-      <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
+      <p>Do you want us to style your home? Fill out the form and fill me in with the details : ) We love meeting new people!</p>
 
       <form action="#" method="post">
         <div class="w3-section">
           <label for="name">Name</label>
-          <input class="w3-input" id="name" type="text" required>
+          <input class="w3-input w3-border" id="name" type="text" required>
         </div>
         <div class="w3-section">
           <label for="email">Email</label>
-          <input class="w3-input" id="email" type="email" required>
+          <input class="w3-input w3-border" id="email" type="email" required>
         </div>
         <div class="w3-section">
           <label for="message">Message</label>
-          <textarea class="w3-input" id="message" name="message" rows="1" required></textarea>
+          <textarea class="w3-input w3-border" id="message" name="message" rows="1" required></textarea>
         </div>
         <div class="w3-section">
-          <button class="w3-button w3-block" type="submit">Send Message</button>
+          <button class="w3-button w3-block w3-large w3-red w3-text-white" type="submit">Send Message</button>
         </div>
       </form>
     </section>
@@ -267,6 +281,7 @@
 
   </footer>
 
+  <script src="js/interior.js"      async></script>
   <script src="js/focus-visible.js" async></script>
 
 </body>
