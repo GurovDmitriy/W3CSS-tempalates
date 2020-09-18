@@ -799,3 +799,13 @@ body.w3css-interior-design {
 .js-focus-visible .w3css-interior-design nav .w3-white.focus-visible {
   outline: 2px solid var(--colorBlack);
 }
+body.w3css-app-launch {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.w3css-app-launch h1,
+.w3css-app-launch h2,
+.w3css-app-launch h3 {
+  font-family: 'Poppins', sans-serif;
+}
