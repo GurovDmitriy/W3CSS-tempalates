@@ -15,28 +15,42 @@
 }
 @font-face {
   font-family: 'Montserrat';
-  src: url('../fonts/woff2/Montserrat-Regular.woff2') format('woff2-variations');
+  src: url('../fonts/woff2/Montserrat-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Montserrat';
-  src: url('../fonts/woff2/Montserrat-Bold.woff2') format('woff2-variations');
+  src: url('../fonts/woff2/Montserrat-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Open-Sans';
-  src: url('../fonts/woff2/OpenSans-Regular.woff2') format('woff2-variations');
+  src: url('../fonts/woff2/OpenSans-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Open-Sans';
-  src: url('../fonts/woff2/OpenSans-Bold.woff2') format('woff2-variations');
+  src: url('../fonts/woff2/OpenSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/woff2/Poppins-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/woff2/Poppins-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -693,5 +707,43 @@ body.w3css-web-designer {
   outline-offset: 2px;
 }
 .js-focus-visible .w3css-web-designer nav .focus-visible {
+  outline-offset: -2px;
+}
+body.w3css-interior-design {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.w3css-interior-design h1,
+.w3css-interior-design h2,
+.w3css-interior-design h3 {
+  font-family: 'Poppins', sans-serif;
+}
+.w3css-interior-design img {
+  width: 100%;
+  height: auto;
+}
+.w3css-interior-design hr {
+  width: 200px;
+}
+.w3css-interior-design .usr-price .w3-col {
+  margin-bottom: 16px;
+}
+.w3css-interior-design .usr-price .w3-col:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 601px) {
+  .w3css-interior-design .usr-price .w3-col {
+    margin-bottom: 0;
+  }
+}
+.js-focus-visible .w3css-interior-design .focus-visible {
+  outline: 2px solid var(--colorWhite);
+}
+.js-focus-visible .w3css-interior-design input.focus-visible,
+.js-focus-visible .w3css-interior-design textarea.focus-visible {
+  outline-offset: 2px;
+}
+.js-focus-visible .w3css-interior-design nav .focus-visible {
   outline-offset: -2px;
 }
