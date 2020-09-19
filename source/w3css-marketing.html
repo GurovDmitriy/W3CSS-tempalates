@@ -42,15 +42,88 @@
 
 <body class="w3css-marketing">
 
-  <header>
+  <header class="w3-padding-64">
 
-    <h1 class="visually-hidden">Marketing</h1>
+    <div class="w3-content w3-container" id="home">
+      <h1>Marketing</h1>
+      <p>Thought partnership outcomes.</p>
+    </div>
 
     <a class="skip-link" href="#main">Skip to Main</a>
 
-    <nav class="w3-sidebar w3-red usr-menu usr-hidden w3-animate-left">
-      <h2 class="visually-hidden">Navigation.</h2>
+    <nav class="w3-top w3-light-grey w3-large">
+
+      <h2 class="visually-hidden">Navigation</h2>
+      <a class="skip-link" href="#main">skip-link</a>
+
+      <button class="w3-right w3-hide-medium w3-hide-large usr-burger" type="button"><span class="visually-hidden">Menu</span></button>
+
+      <div class="w3-row w3-bar usr-menu usr-hidden">
+        <a class="w3-col m3 w3-bar-item w3-button w3-mobile" href="#home">Home</a>
+        <a class="w3-col m3 w3-bar-item w3-button w3-mobile" href="#plans">Plans</a>
+        <a class="w3-col m3 w3-bar-item w3-button w3-mobile" href="#about">About</a>
+        <a class="w3-col m3 w3-bar-item w3-button w3-mobile" href="#contact">Contact</a>
+      </div>
+
     </nav>
+
+    <div class="w3-display-container w3-content w3-container">
+
+      <div class="w3-display-container slide">
+        <picture>
+          <source type="image/webp"
+                  srcset="image/min/coffee.webp">
+
+          <img class="w3-image" src="image/min/coffee.jpg" width="1100" height="500" alt="coffee">
+        </picture>
+        <div class="w3-display-topleft w3-padding">
+          <p class="w3-white w3-padding w3-animate-bottom">Agile replicable</p>
+        </div>
+      </div>
+
+      <div class="w3-display-container slide">
+        <picture>
+          <source type="image/webp"
+                  srcset="image/min/workbench.webp">
+
+          <img class="w3-image" src="image/min/workbench.jpg" width="1100" height="500" alt="workbench">
+        </picture>
+        <div class="w3-display-middle w3-padding">
+          <p class="w3-white w3-padding w3-animate-bottom">Thought leader</p>
+        </div>
+      </div>
+
+      <div class="w3-display-container slide">
+        <picture>
+          <source type="image/webp"
+                  srcset="image/min/sound.webp">
+
+          <img class="w3-image" src="image/min/sound.jpg" width="1100" height="500" alt="soudn">
+        </picture>
+        <div class="w3-display-topright w3-padding">
+          <p class="w3-white w3-padding w3-animate-bottom">Progress thought</p>
+        </div>
+      </div>
+
+      <div class="w3-container w3-xlarge w3-dark-grey">
+        <div class="w3-left">
+          <button class="w3-button fa fa-arrow-circle-left w3-hover-dark-grey w3-hover-text-teal usr-left-btn" type="button">
+            <span class="visually-hidden">slide left</span>
+          </button>
+        </div>
+        <div class="w3-right">
+          <button class="w3-button fa fa-arrow-circle-right w3-hover-dark-grey w3-hover-text-teal usr-right-btn" type="button">
+            <span class="visually-hidden">slide right</span>
+          </button>
+        </div>
+        <div class="w3-center">
+          <button class="usr-indicator w3-transparent w3-border w3-hover-white" type="button" onclick="currentDiv(1)"><span class="visually-hidden">1 slide</span></button>
+          <button class="usr-indicator w3-transparent w3-border w3-hover-white" type="button" onclick="currentDiv(2)"><span class="visually-hidden">2 slide</span></button>
+          <button class="usr-indicator w3-transparent w3-border w3-hover-white" type="button" onclick="currentDiv(3)"><span class="visually-hidden">3 slide</span></button>
+        </div>
+      </div>
+
+    </div>
 
   </header>
 
@@ -74,6 +147,9 @@
 
   </footer>
 
+  <script src="js/default.js"       async></script>
+  <script src="js/marketing.js"     async></script>
+  <script src="js/catering.js"      async></script>
   <script src="js/focus-visible.js" async></script>
 
 </body>

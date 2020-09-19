@@ -851,3 +851,43 @@ body.w3css-marketing {
   font-weight: 400;
   font-style: normal;
 }
+.w3css-marketing h1,
+.w3css-marketing h2,
+.w3css-marketing h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.w3css-marketing img {
+  width: 100%;
+  height: auto;
+}
+.w3css-marketing nav {
+  padding: 16px;
+}
+@media (min-width: 601px) {
+  .w3css-marketing nav {
+    padding: 0;
+  }
+}
+.w3css-marketing .w3-content {
+  max-width: 1100px;
+}
+.w3css-marketing .usr-menu {
+  width: 100%;
+}
+@media (min-width: 601px) {
+  .w3css-marketing .usr-menu {
+    display: block;
+    width: auto;
+  }
+}
+.w3css-marketing .usr-burger {
+  position: relative;
+  top: auto;
+  right: auto;
+}
+.w3css-marketing .usr-indicator {
+  width: 15px;
+  height: 15px;
+}
