@@ -819,3 +819,12 @@ body.w3css-app-launch.w3-content {
 .w3css-app-launch .usr-slide-caption {
   width: 35%;
 }
+@media (min-width: 601px) {
+  .w3css-app-launch .usr-btn-slide {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    border-radius: 8px;
+    transform: translate(0, -50%);
+  }
+}
