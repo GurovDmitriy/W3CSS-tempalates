@@ -24,3 +24,19 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";
 }
+
+const modalBtns = document.querySelectorAll('.usr-modal-btn');
+const modal = document.querySelector('.w3-modal');
+const modalClose = document.querySelector('.usr-modal-btn-close');
+
+for (let i = 0; i < modalBtns.length; i++) {
+  modalBtns[i].onclick = function () {
+    modal.classList.add('usr-show');
+  }
+}
+
+
+
+modalClose.onclick = function () {
+  modal.classList.remove('usr-show');
+}
