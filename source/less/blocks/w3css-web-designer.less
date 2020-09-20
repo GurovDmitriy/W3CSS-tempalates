@@ -96,28 +96,61 @@ body.w3css-web-designer {
   text-transform: uppercase;
 }
 
-.w3css-web-designer .usr-burger {
-  position: fixed;
-  top: 16px;
-  right: 16px;
-
-  width: 50px;
-  height: 20px;
-
-  box-shadow: 0 3px 0 0 var(--colorGrey);
-
-
-  &::before,
-  &::after {
-    height: 3px;
-
-    background-color: var(--colorGrey);
-  }
-
+.w3css-web-designer .w3-overlay {
   @media (min-width: @tabletWidth) {
     display: none;
   }
 }
+
+.w3css-web-designer .usr-burger {
+  position: fixed;
+  top: 16;
+  right: 16px;
+
+  box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+
+  @media (min-width: @tabletWidth) {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    background-color: var(--colorGrey);
+  }
+}
+
+.w3css-web-designer .usr-burger--open {
+  animation-name: burgerOpenWebdes;
+}
+
+.w3css-web-designer .usr-burger--close {
+  animation-name: burgerCloseWebdes;
+}
+
+@keyframes burgerOpenWebdes {
+  0% {
+      box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+
+  100% {
+      box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+
+@keyframes burgerCloseWebdes {
+  0% {
+      box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+
+  100% {
+      box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+
 
 .js-focus-visible .w3css-web-designer .focus-visible {
   .focusCustom(var(--colorWhite));

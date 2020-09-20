@@ -169,6 +169,10 @@ footer {
 .usr-hidden {
   display: none;
 }
+.usr-main-page ul {
+  list-style: none;
+  padding: 0;
+}
 .usr-main-page ul a {
   text-decoration: none;
 }
@@ -183,7 +187,7 @@ footer {
   height: 20px;
   padding: 0;
   border: none;
-  box-shadow: 0 2px 0 0 var(--colorBlack);
+  box-shadow: inset 0 -2px 0 0 var(--colorBlack);
   /*  border-bottom: 2px solid var(--colorBlack);*/
   background-color: transparent;
 }
@@ -204,6 +208,7 @@ footer {
   top: 50%;
   right: 0;
   width: 100%;
+  transform: translate(0, -50%);
 }
 .usr-burger--open {
   animation-name: burgerOpen;
@@ -249,11 +254,11 @@ footer {
 }
 @keyframes burgerOpen {
   0% {
-    box-shadow: 0 2px 0 0 var(--colorBlack);
+    box-shadow: inset 0 -2px 0 0 var(--colorBlack);
     /*border-bottom: 2px solid var(--colorBlack);*/
   }
   100% {
-    box-shadow: 0 2px 0 0 transparent;
+    box-shadow: inset 0 -2px 0 0 transparent;
     /*border-bottom: 2px solid transparent;*/
   }
 }
@@ -263,65 +268,65 @@ footer {
   }
   25% {
     width: 100%;
-    transform: translateY(0) rotate(0) scaleX(1);
+    transform: translate(0, -50%) rotate(0) scaleX(1);
   }
   25% {
     width: 100%;
-    transform: translateY(0) rotate(0) scaleX(1);
+    transform: translate(0, -50%) rotate(0) scaleX(1);
   }
   50% {
     width: 100%;
-    transform: translateY(0) rotate(0) scaleX(0.6);
+    transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   50% {
     width: 100%;
-    transform: translateY(0) rotate(0) scaleX(0.6);
+    transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   75% {
     width: 100%;
-    transform: translateY(0) rotate(0) scaleX(0.6);
+    transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   100% {
     width: 100%;
-    transform: translateY(-50%) rotate(45deg) scaleX(0.6);
+    transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
   }
 }
 @keyframes burgerBeforeOpen {
   0% {
-    transform: translateY(0) rotate(0) scaleX(1);
+    transform: translate(0, 0) rotate(0) scaleX(1);
   }
   25% {
     top: 0;
-    transform: translateY(0) rotate(0) scaleX(1);
+    transform: translate(0, 0) rotate(0) scaleX(1);
   }
   25% {
     top: 0;
-    transform: translateY(0) rotate(0) scaleX(1);
+    transform: translate(0, 0) rotate(0) scaleX(1);
   }
   50% {
     top: 0;
-    transform: translateY(0) rotate(0) scaleX(0.6);
+    transform: translate(0, 0) rotate(0) scaleX(0.6);
   }
   75% {
     top: 50%;
-    transform: translateY(-50%) rotate(0) scaleX(0.6);
+    transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   75% {
     top: 50%;
-    transform: translateY(-50%) rotate(0) scaleX(0.6);
+    transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   100% {
     top: 50%;
-    transform: translateY(-50%) rotate(-45deg) scaleX(0.6);
+    transform: translate(0, -50%) rotate(-45deg) scaleX(0.6);
   }
 }
 @keyframes burgerClose {
   0% {
-    box-shadow: 0 2px 0 0 var(--colorBlack);
+    box-shadow: inset 0 -2px 0 0 var(--colorBlack);
     /*border-bottom: 2px solid var(--colorBlack);*/
   }
   100% {
-    box-shadow: 0 2px 0 0 transparent;
+    box-shadow: inset 0 -2px 0 0 transparent;
     /*border-bottom: 2px solid transparent;*/
   }
 }
@@ -331,56 +336,56 @@ footer {
   }
   25% {
     width: 100%;
-    transform: translateY(0) rotate(0) scaleX(1);
+    transform: translate(0, -50%) rotate(0) scaleX(1);
   }
   25% {
     width: 100%;
-    transform: translateY(0) rotate(0) scaleX(1);
+    transform: translate(0, -50%) rotate(0) scaleX(1);
   }
   50% {
     width: 100%;
-    transform: translateY(0) rotate(0) scaleX(0.6);
+    transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   50% {
     width: 100%;
-    transform: translateY(0) rotate(0) scaleX(0.6);
+    transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   75% {
     width: 100%;
-    transform: translateY(0) rotate(0) scaleX(0.6);
+    transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   100% {
     width: 100%;
-    transform: translateY(-50%) rotate(45deg) scaleX(0.6);
+    transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
   }
 }
 @keyframes burgerBeforeClose {
   0% {
-    transform: translateY(0) rotate(0) scaleX(1);
+    transform: translate(0, 0) rotate(0) scaleX(1);
   }
   25% {
     top: 0;
-    transform: translateY(0) rotate(0) scaleX(1);
+    transform: translate(0, 0) rotate(0) scaleX(1);
   }
   25% {
     top: 0;
-    transform: translateY(0) rotate(0) scaleX(1);
+    transform: translate(0, 0) rotate(0) scaleX(1);
   }
   50% {
     top: 0;
-    transform: translateY(0) rotate(0) scaleX(0.6);
+    transform: translate(0, 0) rotate(0) scaleX(0.6);
   }
   75% {
     top: 50%;
-    transform: translateY(-50%) rotate(0) scaleX(0.6);
+    transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   75% {
     top: 50%;
-    transform: translateY(-50%) rotate(0) scaleX(0.6);
+    transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   100% {
     top: 50%;
-    transform: translateY(-50%) rotate(-45deg) scaleX(0.6);
+    transform: translate(0, -50%) rotate(-45deg) scaleX(0.6);
   }
 }
 .w3css-gourment-catering header {
@@ -551,14 +556,37 @@ body.w3css-photolio {
   max-width: 1500px;
 }
 .w3css-photolio .usr-burger {
-  width: 50px;
-  height: 20px;
-  box-shadow: 0 3px 0 0 var(--colorGrey);
+  box-shadow: inset 0 -2px 0 0 var(--colorGrey);
 }
 .w3css-photolio .usr-burger::before,
 .w3css-photolio .usr-burger::after {
-  height: 3px;
   background-color: var(--colorGrey);
+}
+.w3css-photolio .usr-burger--open {
+  animation-name: burgerOpenPhotolio;
+}
+.w3css-photolio .usr-burger--close {
+  animation-name: burgerClosePhotolio;
+}
+@keyframes burgerOpenPhotolio {
+  0% {
+    box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@keyframes burgerClosePhotolio {
+  0% {
+    box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
 }
 .js-focus-visible .w3css-photolio .focus-visible {
   outline: 2px solid var(--colorGrey);
@@ -696,22 +724,50 @@ body.w3css-web-designer {
 .w3css-web-designer form button {
   text-transform: uppercase;
 }
+@media (min-width: 601px) {
+  .w3css-web-designer .w3-overlay {
+    display: none;
+  }
+}
 .w3css-web-designer .usr-burger {
   position: fixed;
-  top: 16px;
+  top: 16;
   right: 16px;
-  width: 50px;
-  height: 20px;
-  box-shadow: 0 3px 0 0 var(--colorGrey);
-}
-.w3css-web-designer .usr-burger::before,
-.w3css-web-designer .usr-burger::after {
-  height: 3px;
-  background-color: var(--colorGrey);
+  box-shadow: inset 0 -2px 0 0 var(--colorGrey);
 }
 @media (min-width: 601px) {
   .w3css-web-designer .usr-burger {
     display: none;
+  }
+}
+.w3css-web-designer .usr-burger::before,
+.w3css-web-designer .usr-burger::after {
+  background-color: var(--colorGrey);
+}
+.w3css-web-designer .usr-burger--open {
+  animation-name: burgerOpenWebdes;
+}
+.w3css-web-designer .usr-burger--close {
+  animation-name: burgerCloseWebdes;
+}
+@keyframes burgerOpenWebdes {
+  0% {
+    box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@keyframes burgerCloseWebdes {
+  0% {
+    box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
   }
 }
 .js-focus-visible .w3css-web-designer .focus-visible {
@@ -779,22 +835,50 @@ body.w3css-interior-design {
     margin-left: 200px;
   }
 }
+@media (min-width: 601px) {
+  .w3css-interior-design .w3-overlay {
+    display: none;
+  }
+}
 .w3css-interior-design .usr-burger {
   position: fixed;
-  top: 16px;
+  top: 16;
   right: 16px;
-  width: 50px;
-  height: 20px;
-  box-shadow: 0 3px 0 0 var(--colorRed);
-}
-.w3css-interior-design .usr-burger::before,
-.w3css-interior-design .usr-burger::after {
-  height: 3px;
-  background-color: var(--colorRed);
+  box-shadow: inset 0 -2px 0 0 var(--colorRed);
 }
 @media (min-width: 601px) {
   .w3css-interior-design .usr-burger {
     display: none;
+  }
+}
+.w3css-interior-design .usr-burger::before,
+.w3css-interior-design .usr-burger::after {
+  background-color: var(--colorRed);
+}
+.w3css-interior-design .usr-burger--open {
+  animation-name: burgerOpenInterior;
+}
+.w3css-interior-design .usr-burger--close {
+  animation-name: burgerCloseInterior;
+}
+@keyframes burgerOpenInterior {
+  0% {
+    box-shadow: inset 0 -2px 0 0 var(--colorRed);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@keyframes burgerCloseInterior {
+  0% {
+    box-shadow: inset 0 -2px 0 0 var(--colorRed);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
   }
 }
 .js-focus-visible .w3css-interior-design .focus-visible {
@@ -897,7 +981,7 @@ body.w3css-marketing {
 .js-focus-visible .w3css-marketing .focus-visible {
   outline: 2px solid var(--colorBlack);
 }
-.js-focus-visible .w3css-marketing nav .focus-visible {
+.js-focus-visible .w3css-marketing .usr-menu .focus-visible {
   outline-offset: -2px;
 }
 .js-focus-visible .w3css-marketing .usr-pricing h3.focus-visible {

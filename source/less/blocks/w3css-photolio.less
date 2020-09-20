@@ -30,17 +30,43 @@ body.w3css-photolio {
 }
 
 .w3css-photolio .usr-burger {
-  width: 50px;
-  height: 20px;
-
-  box-shadow: 0 3px 0 0 var(--colorGrey);
-
+  box-shadow: inset 0 -2px 0 0 var(--colorGrey);
 
   &::before,
   &::after {
-    height: 3px;
-
     background-color: var(--colorGrey);
+  }
+}
+
+.w3css-photolio .usr-burger--open {
+  animation-name: burgerOpenPhotolio;
+}
+
+.w3css-photolio .usr-burger--close {
+  animation-name: burgerClosePhotolio;
+}
+
+@keyframes burgerOpenPhotolio {
+  0% {
+      box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+
+  100% {
+      box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+
+@keyframes burgerClosePhotolio {
+  0% {
+      box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+
+  100% {
+      box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
   }
 }
 
