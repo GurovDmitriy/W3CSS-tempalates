@@ -11,4 +11,4 @@ burger.onclick = function () {
   }
 
   menu.classList.toggle('usr-hidden');
-}
+};
