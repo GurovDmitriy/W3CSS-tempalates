@@ -252,7 +252,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('serve', [
     'less',
-    'concat',
     'browserSync:serverSync',
     'concurrent:targetWatch',
   ]);

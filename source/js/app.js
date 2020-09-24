@@ -25,6 +25,20 @@ function showDivs(n) {
   x[slideIndex - 1].style.display = 'block';
 }
 
+showSlides();
+
+function showSlides() {
+  let i;
+  const slides = document.getElementsByClassName('slide');
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1; }
+  slides[slideIndex - 1].style.display = 'block';
+  setTimeout(showSlides, 6000);
+}
+
 const modalBtns = document.querySelectorAll('.usr-modal-btn');
 const modal = document.querySelector('.w3-modal');
 const modalClose = document.querySelector('.usr-modal-btn-close');
@@ -38,3 +52,11 @@ for (let i = 0; i < modalBtns.length; i++) {
 modalClose.onclick = function () {
   modal.classList.remove('usr-show');
 };
+
+document.addEventListener('keyup', (e) => {
+  if (e.keyCode === 27) {
+    if (modal.classList.contains('usr-show')) {
+      modal.classList.remove('usr-show');
+    }
+  }
+});

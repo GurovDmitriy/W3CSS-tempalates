@@ -39,6 +39,25 @@ function showDivs(n) {
   dots[slideIndex - 1].className += ' w3-white';
 }
 
+showSlides();
+
+function showSlides() {
+  let i;
+  const slides = document.getElementsByClassName('slide');
+  const dots = indicators;
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1; }
+  slides[slideIndex - 1].style.display = 'block';
+  setTimeout(showSlides, 6000);
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(' w3-white', '');
+  }
+  dots[slideIndex - 1].className += ' w3-white';
+}
+
 // set the observer options
 const options = {
   root: null,
