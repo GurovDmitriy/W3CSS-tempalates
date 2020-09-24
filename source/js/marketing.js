@@ -58,31 +58,25 @@ function showSlides() {
   dots[slideIndex - 1].className += ' w3-white';
 }
 
-// set the observer options
-const options = {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.5,
-};
+// scrollspy
 
-// create observer
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      // add an observed class to the section
-      entry.target.classList.add('observed');
-      // check the section's id
-      document.querySelectorAll('nav a').forEach((link) => {
-        if (link.hash === `#${entry.target.id}`) {
-          link.classList.add('w3-dark-grey');
-        } else {
-          link.classList.remove('w3-dark-grey');
-        }
-      });
-    }
-  });
-}, options);
-// Observe all sections that have an `id` applied
-document.querySelectorAll('div[id]').forEach((section) => {
-  observer.observe(section);
+const sections = document.querySelectorAll('div[id]');
+const menu_links = document.querySelectorAll('nav a.w3-bar-item');
+
+const makeActive = (link) => menu_links[link].classList.add('w3-dark-grey');
+const removeActive = (link) => menu_links[link].classList.remove('w3-dark-grey');
+const removeAllActive = () => [...Array(sections.length).keys()].forEach((link) => removeActive(link));
+
+const sectionMargin = 200;
+
+let currentActive = 0;
+
+window.addEventListener('scroll', () => {
+  const current = sections.length - [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - sectionMargin) - 1;
+
+  if (current !== currentActive) {
+    removeAllActive();
+    currentActive = current;
+    makeActive(current);
+  }
 });
