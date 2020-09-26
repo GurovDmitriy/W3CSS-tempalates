@@ -1,26 +1,25 @@
 'use strict'
 
-const gridBtn = document.querySelector('.usr-grid-btn');
-const imgs = document.querySelectorAll('.w3-image');
-const row = document.querySelector('.w3-row');
+const sections = document.querySelectorAll('section[id]');
+const menu_links = document.querySelectorAll('.usr-menu a');
 
-gridBtn.onclick = function () {
-  for (let i = 0; i < imgs.length; i++) {
-    imgs[i].classList.toggle('w3-margin-bottom');
+const makeActive = (link) => menu_links[link].classList.add('w3-light-grey');
+const removeActive = (link) => menu_links[link].classList.remove('w3-light-grey');
+const removeAllActive = () => [...Array(sections.length).keys()].forEach((link) => removeActive(link));
+
+const sectionMargin = 100;
+
+let currentActive = 0;
+
+window.addEventListener('scroll', () => {
+  const current = sections.length - [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - sectionMargin) - 1;
+
+  if (current !== currentActive) {
+    removeAllActive();
+    currentActive = current;
+    makeActive(current);
   }
-
-  row.classList.toggle('w3-row-padding');
-};
-
-window.onscroll = function () { myFunction(); };
-function myFunction() {
-  const navbar = document.querySelector('.usr-nav-box');
-  if (document.body.scrollTop > 270 || document.documentElement.scrollTop > 270) {
-    navbar.className = 'w3-top' + ' usr-nav-box' + ' w3-white';
-  } else {
-    navbar.className = navbar.className.replace('w3-top usr-nav-box w3-white', 'w3-top usr-nav-box');
-  }
-}
+});
 
 // Modal Image Gallery
 const gallery = document.querySelector('.usr-gallery');

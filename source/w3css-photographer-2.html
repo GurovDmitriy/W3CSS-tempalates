@@ -76,14 +76,19 @@
 
   <main class="w3-content w3-padding-32" id="main">
 
-    <section>
+    <section class="usr-gallery">
       <h2 class="visually-hidden">Gallery</h2>
+
+      <a class="skip-link" href="#contact">skip gallery</a>
+
+      <div class="w3-overlay w3-animate-opacity usr-gallery__overlay usr-gallery__overlay--hidden"></div>
+
       <div class="w3-margin-bottom">
         <picture>
           <source type="image/webp"
                   srcset="image/min/ocean.webp">
 
-          <img class="w3-image" src="image/min/ocean.jpg" width="1000" height="500" loading="lazy" alt="Photographer Jane">
+          <img class="w3-image" src="image/min/ocean.jpg" width="1000" height="500" loading="lazy" tabindex="0" alt="Photographer Jane">
         </picture>
       </div>
       <div class="w3-margin-bottom">
@@ -91,7 +96,7 @@
           <source type="image/webp"
                   srcset="image/min/ocean2.webp">
 
-          <img class="w3-image" src="image/min/ocean2.jpg" width="1000" height="500" loading="lazy" alt="Photographer Jane">
+          <img class="w3-image" src="image/min/ocean2.jpg" width="1000" height="500" loading="lazy" tabindex="0" alt="Photographer Jane">
         </picture>
       </div>
       <div class="w3-margin-bottom">
@@ -99,7 +104,7 @@
           <source type="image/webp"
                   srcset="image/min/falls2.webp">
 
-          <img class="w3-image" src="image/min/falls2.jpg" width="1000" height="500" loading="lazy" alt="Photographer Jane">
+          <img class="w3-image" src="image/min/falls2.jpg" width="1000" height="500" loading="lazy" tabindex="0" alt="Photographer Jane">
         </picture>
       </div>
       <div class="w3-margin-bottom">
@@ -107,7 +112,7 @@
           <source type="image/webp"
                   srcset="image/min/mountainskies.webp">
 
-          <img class="w3-image" src="image/min/mountainskies.jpg" width="1000" height="500" loading="lazy" alt="Photographer Jane">
+          <img class="w3-image" src="image/min/mountainskies.jpg" width="1000" height="500" loading="lazy" tabindex="0" alt="Photographer Jane">
         </picture>
       </div>
       <div class="w3-margin-bottom">
@@ -115,12 +120,12 @@
           <source type="image/webp"
                   srcset="image/min/mountains2.webp">
 
-          <img class="w3-image" src="image/min/mountains2.jpg" width="1000" height="500" loading="lazy" alt="Photographer Jane">
+          <img class="w3-image" src="image/min/mountains2.jpg" width="1000" height="500" loading="lazy" tabindex="0" alt="Photographer Jane">
         </picture>
       </div>
     </section>
 
-    <section class="w3-container w3-padding-32 w3-light-grey">
+    <section class="w3-container w3-padding-32 w3-light-grey" id="contact">
       <h2 class="w3-center">Contact</h2>
       <p>Storytelling human-centered living a fully ethical life program areas B-corp change-makers venture philanthropy. Impact investing; framework; triple bottom line living a fully ethical life co-create corporate social responsibility expose the truth ideate leverage. Society agile inclusion technology, issue outcomes; shine paradigm but. Inspiring revolutionary agile replicable, initiative scalable citizen-centered, rubric.</p>
       <form action="#" method="post">
@@ -156,6 +161,7 @@
 
   </footer>
 
+  <script src="js/phtographer-2.js" async></script>
   <script src="js/focus-visible.js" async></script>
 
 </body>

@@ -25,7 +25,7 @@ module.exports = function (grunt) {
         tasks: ['less', 'clean:buildCleanStyleDev', 'copy:buildStyleCopy', 'postcss', 'cssmin'],
       },
       jsWatchDev: {
-        files: ['source/js/*/*.js'],
+        files: ['source/js/**/*.js'],
         tasks: ['clean:buildCleanJsDev', 'copy:buildJsCopy', 'uglify'],
       },
     },

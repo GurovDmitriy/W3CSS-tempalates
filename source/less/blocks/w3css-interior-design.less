@@ -129,11 +129,52 @@ body.w3css-interior-design {
   outline-offset: -2px;
 }
 
+.js-focus-visible .w3css-interior-design .usr-gallery .focus-visible {
+  outline-offset: 2px;
+}
+
 .js-focus-visible .w3css-interior-design .usr-price .w3-red > h3.focus-visible {
   .focusCustom(var(--colorWhite));
 }
 
 .js-focus-visible .w3css-interior-design nav .w3-white.focus-visible {
   .focusCustom(var(--colorBlack));
+}
+
+.w3css-interior-design .usr-gallery .w3-image {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.w3css-interior-design .usr-gallery .w3-image--show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 12;
+
+  width: 100%;
+
+  transform: translate(-50%, -50%);
+
+  @media (min-width: @tabletWidth) {
+    width: 80vw;
+  }
+
+  @media (min-width: @desktopWidth) {
+    width: 70vw;
+  }
+}
+
+.w3css-interior-design .usr-gallery__overlay {
+  z-index: 11;
+
+  display: block;
+
+  background-color: var(--colorOverlay);
+}
+
+.w3css-interior-design .usr-gallery__overlay--hidden {
+  display: none;
 }
 

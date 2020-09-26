@@ -32,3 +32,44 @@
 .w3css-architect main.w3-content {
   max-width: 1532px;
 }
+
+.w3css-architect .usr-gallery .w3-image {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.w3css-architect .usr-gallery .w3-image--show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 12;
+
+  width: 100%;
+
+  transform: translate(-50%, -50%);
+
+  @media (min-width: @tabletWidth) {
+    width: 80vw;
+  }
+
+  @media (min-width: @desktopWidth) {
+    width: 70vw;
+  }
+}
+
+.w3css-architect .usr-gallery__overlay {
+  z-index: 11;
+
+  display: block;
+
+  background-color: var(--colorOverlay);
+}
+
+.w3css-architect .usr-gallery__overlay--hidden {
+  display: none;
+}
+
+.js-focus-visible .w3css-architect .usr-gallery .focus-visible {
+  outline-offset: 2px;
+}

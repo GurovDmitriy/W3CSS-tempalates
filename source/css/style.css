@@ -78,6 +78,7 @@
   --colorGrey: #757575;
   --colorRed: #f44336;
   --colorGreen: #4CAF50;
+  --colorOverlay: rgba(0, 0, 0, 0.8);
 }
 /* переменные less */
 /* переменные вьюпорта */
@@ -455,6 +456,38 @@ footer {
 .w3css-architect main.w3-content {
   max-width: 1532px;
 }
+.w3css-architect .usr-gallery .w3-image:hover {
+  cursor: pointer;
+}
+.w3css-architect .usr-gallery .w3-image--show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 12;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 601px) {
+  .w3css-architect .usr-gallery .w3-image--show {
+    width: 80vw;
+  }
+}
+@media (min-width: 1100px) {
+  .w3css-architect .usr-gallery .w3-image--show {
+    width: 70vw;
+  }
+}
+.w3css-architect .usr-gallery__overlay {
+  z-index: 11;
+  display: block;
+  background-color: var(--colorOverlay);
+}
+.w3css-architect .usr-gallery__overlay--hidden {
+  display: none;
+}
+.js-focus-visible .w3css-architect .usr-gallery .focus-visible {
+  outline-offset: 2px;
+}
 body.w3css-jane-bloglife {
   font-family: 'Open-Sans', sans-serif;
   font-weight: 400;
@@ -602,6 +635,38 @@ body.w3css-photolio {
 .js-focus-visible .w3css-photolio .focus-visible {
   outline: 2px solid var(--colorGrey);
 }
+.js-focus-visible .w3css-photolio .usr-gallery .focus-visible {
+  outline-offset: 2px;
+}
+.w3css-photolio .usr-gallery .w3-image:hover {
+  cursor: pointer;
+}
+.w3css-photolio .usr-gallery .w3-image--show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 12;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 601px) {
+  .w3css-photolio .usr-gallery .w3-image--show {
+    width: 80vw;
+  }
+}
+@media (min-width: 1100px) {
+  .w3css-photolio .usr-gallery .w3-image--show {
+    width: 70vw;
+  }
+}
+.w3css-photolio .usr-gallery__overlay {
+  z-index: 11;
+  display: block;
+  background-color: var(--colorOverlay);
+}
+.w3css-photolio .usr-gallery__overlay--hidden {
+  display: none;
+}
 body.w3css-photographer {
   font-family: 'Raleway', sans-serif;
 }
@@ -615,6 +680,7 @@ body.w3css-photographer {
 .w3css-photographer img {
   width: 100%;
   height: auto;
+  filter: grayscale(100%);
 }
 .w3css-photographer .w3-content {
   max-width: 1500px;
@@ -624,6 +690,38 @@ body.w3css-photographer {
 }
 .js-focus-visible .w3css-photographer nav .focus-visible {
   outline-offset: -2px;
+}
+.js-focus-visible .w3css-photographer .usr-gallery .focus-visible {
+  outline-offset: 2px;
+}
+.w3css-photographer .usr-gallery .w3-image:hover {
+  cursor: pointer;
+}
+.w3css-photographer .usr-gallery .w3-image--show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 12;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 601px) {
+  .w3css-photographer .usr-gallery .w3-image--show {
+    width: 80vw;
+  }
+}
+@media (min-width: 1100px) {
+  .w3css-photographer .usr-gallery .w3-image--show {
+    width: 70vw;
+  }
+}
+.w3css-photographer .usr-gallery__overlay {
+  z-index: 11;
+  display: block;
+  background-color: var(--colorOverlay);
+}
+.w3css-photographer .usr-gallery__overlay--hidden {
+  display: none;
 }
 .w3css-photographer-2 header p,
 .w3css-photographer-2 h1 {
@@ -653,6 +751,38 @@ body.w3css-photographer {
 .js-focus-visible .w3css-photographer-2 nav .focus-visible {
   outline-offset: -2px;
 }
+.js-focus-visible .w3css-photographer-2 .usr-gallery .focus-visible {
+  outline-offset: 2px;
+}
+.w3css-photographer-2 .usr-gallery .w3-image:hover {
+  cursor: pointer;
+}
+.w3css-photographer-2 .usr-gallery .w3-image--show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 12;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 601px) {
+  .w3css-photographer-2 .usr-gallery .w3-image--show {
+    width: 80vw;
+  }
+}
+@media (min-width: 1100px) {
+  .w3css-photographer-2 .usr-gallery .w3-image--show {
+    width: 70vw;
+  }
+}
+.w3css-photographer-2 .usr-gallery__overlay {
+  z-index: 11;
+  display: block;
+  background-color: var(--colorOverlay);
+}
+.w3css-photographer-2 .usr-gallery__overlay--hidden {
+  display: none;
+}
 body.w3css-web-designer {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
@@ -673,6 +803,7 @@ body.w3css-web-designer {
 .w3css-web-designer img {
   width: 100%;
   height: auto;
+  filter: grayscale(100%);
 }
 .w3css-web-designer nav {
   width: 120px;
@@ -795,6 +926,38 @@ body.w3css-web-designer {
 .js-focus-visible .w3css-web-designer nav .focus-visible {
   outline-offset: -2px;
 }
+.js-focus-visible .w3css-web-designer .usr-gallery .focus-visible {
+  outline-offset: 2px;
+}
+.w3css-web-designer .usr-gallery .w3-image:hover {
+  cursor: pointer;
+}
+.w3css-web-designer .usr-gallery .w3-image--show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 12;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 601px) {
+  .w3css-web-designer .usr-gallery .w3-image--show {
+    width: 80vw;
+  }
+}
+@media (min-width: 1100px) {
+  .w3css-web-designer .usr-gallery .w3-image--show {
+    width: 70vw;
+  }
+}
+.w3css-web-designer .usr-gallery__overlay {
+  z-index: 11;
+  display: block;
+  background-color: var(--colorOverlay);
+}
+.w3css-web-designer .usr-gallery__overlay--hidden {
+  display: none;
+}
 body.w3css-interior-design {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -907,11 +1070,43 @@ body.w3css-interior-design {
   outline: 2px solid var(--colorWhite);
   outline-offset: -2px;
 }
+.js-focus-visible .w3css-interior-design .usr-gallery .focus-visible {
+  outline-offset: 2px;
+}
 .js-focus-visible .w3css-interior-design .usr-price .w3-red > h3.focus-visible {
   outline: 2px solid var(--colorWhite);
 }
 .js-focus-visible .w3css-interior-design nav .w3-white.focus-visible {
   outline: 2px solid var(--colorBlack);
+}
+.w3css-interior-design .usr-gallery .w3-image:hover {
+  cursor: pointer;
+}
+.w3css-interior-design .usr-gallery .w3-image--show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 12;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 601px) {
+  .w3css-interior-design .usr-gallery .w3-image--show {
+    width: 80vw;
+  }
+}
+@media (min-width: 1100px) {
+  .w3css-interior-design .usr-gallery .w3-image--show {
+    width: 70vw;
+  }
+}
+.w3css-interior-design .usr-gallery__overlay {
+  z-index: 11;
+  display: block;
+  background-color: var(--colorOverlay);
+}
+.w3css-interior-design .usr-gallery__overlay--hidden {
+  display: none;
 }
 body.w3css-app-launch {
   font-family: 'Poppins', sans-serif;
