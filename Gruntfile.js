@@ -17,12 +17,12 @@ module.exports = function (grunt) {
         tasks: ['less'],
       },
       HtmlWatchDev: {
-        files: ['source/*.html'],
+        files: ['source/**/*.html'],
         tasks: ['clean:buildCleanHtmlDev', 'copy:buildHtmlCopy', 'htmlmin'],
       },
       styleWatchDev: {
         files: ['source/less/**/*.less'],
-        tasks: ['less', 'clean:buildCleanStyleDev', 'copy:buildStyleCopy', 'postcss', 'cssmin'],
+        tasks: ['less:lessBuild', 'clean:buildCleanStyleDev', 'copy:buildStyleCopy', 'cssmin'],
       },
       jsWatchDev: {
         files: ['source/js/**/*.js'],
@@ -33,7 +33,7 @@ module.exports = function (grunt) {
     browserSync: {
       serverSync: {
         bsFiles: {
-          src: ['source/*.html', 'source/css/*.css', 'source/js/*.js'],
+          src: ['source/**/*.html', 'source/css/*.css', 'source/js/*.js'],
         },
         options: {
           server: 'source/',
@@ -42,10 +42,10 @@ module.exports = function (grunt) {
       },
       serverSyncDev: {
         bsFiles: {
-          src: ['build/*.html', 'build/css/*.css', 'build/js/*.js'],
+          src: ['docs/**/*.html', 'docs/css/*.css', 'docs/js/*.js'],
         },
         options: {
-          server: 'build/',
+          server: 'docs/',
           watchTask: true,
         },
       },
@@ -60,16 +60,16 @@ module.exports = function (grunt) {
           'source/css/style.css': 'source/less/style.less',
         },
       },
-    },
-
-    postcss: {
-      stylePrefix: {
+      lessBuild: {
         options: {
-          processors: [
-            require('autoprefixer')(),
+          relativeUrls: true,
+          plugins: [
+            new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]})
           ],
         },
-        src: 'build/css/style.css',
+        files: {
+          'source/css/style.css': 'source/less/style.less',
+        },
       },
     },
 
@@ -77,9 +77,9 @@ module.exports = function (grunt) {
       target: {
         files: [{
           expand: true,
-          cwd: 'build/css/',
+          cwd: 'docs/css/',
           src: ['*.css', '!*.min.css'],
-          dest: 'build/css/',
+          dest: 'docs/css/',
         }]
       }
     },
@@ -92,9 +92,9 @@ module.exports = function (grunt) {
       jsMin: {
         files: [{
           expand: true,
-          cwd: 'build/js',
+          cwd: 'docs/js',
           src: '*.js',
-          dest: 'build/js',
+          dest: 'docs/js',
         }],
       },
     },
@@ -148,6 +148,17 @@ module.exports = function (grunt) {
           dest: 'source/image/min/',
         }],
       },
+      svgMin: {
+        options: {
+          svgo: ['--enable', 'cleanupIDs', '--disable', 'convertColors'],
+        },
+        files: [{
+          expand: true,
+          cwd: 'source/image/origin/',
+          src: ['**/*.svg'],
+          dest: 'source/image/min/',
+        }],
+      },
     },
 
     prettify: {
@@ -156,10 +167,10 @@ module.exports = function (grunt) {
       },
       files: {
         expand: true,
-        cwd: 'build/',
+        cwd: 'docs/',
         ext: '.html',
         src: ['*.html'],
-        dest: 'build/',
+        dest: 'docs/',
       },
     },
 
@@ -171,9 +182,9 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'build',
+          cwd: 'docs',
           src: ['**/*.html', '*.html'],
-          dest: 'build',
+          dest: 'docs',
         }],
       },
     },
@@ -187,16 +198,16 @@ module.exports = function (grunt) {
 
     clean: {
       buildClean: {
-        src: ['build/'],
+        src: ['docs/'],
       },
       buildCleanStyleDev: {
-        src: ['build/css/'],
+        src: ['docs/css/'],
       },
       buildCleanJsDev: {
-        src: ['build/js/'],
+        src: ['docs/js/'],
       },
       buildCleanHtmlDev: {
-        src: ['build/*.html'],
+        src: ['docs/*.html'],
       },
     },
 
@@ -206,15 +217,17 @@ module.exports = function (grunt) {
           expand: true,
           cwd: 'source',
           src: [
+            '*',
             '*.xml',
             '*.html',
             'fonts/woff2/*',
             'image/min/*',
+            'works/**/*',
             'image/favicon/*',
             'css/style.css',
             'js/*.js',
           ],
-          dest: 'build/',
+          dest: 'docs/',
         }],
       },
       buildStyleCopy: {
@@ -224,7 +237,7 @@ module.exports = function (grunt) {
           src: [
             'css/style.css',
           ],
-          dest: 'build/',
+          dest: 'docs/',
         }],
       },
       buildJsCopy: {
@@ -234,7 +247,7 @@ module.exports = function (grunt) {
           src: [
             'js/*.js',
           ],
-          dest: 'build/',
+          dest: 'docs/',
         }],
       },
       buildHtmlCopy: {
@@ -244,7 +257,7 @@ module.exports = function (grunt) {
           src: [
             '*.html',
           ],
-          dest: 'build/',
+          dest: 'docs/',
         }],
       },
     },
@@ -257,10 +270,9 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('serveDev', [
-    'less',
+    'less:lessBuild',
     'clean:buildClean',
     'copy:buildCopy',
-    'postcss',
     'cssmin',
     'uglify',
     'htmlmin',
@@ -270,15 +282,19 @@ module.exports = function (grunt) {
 
   grunt.registerTask('imgpress', [
     'cwebp',
-    'image',
+    'image.imageMin',
+    'svgstore',
+  ]);
+
+  grunt.registerTask('svgsprite', [
+    'image:svgMin',
     'svgstore',
   ]);
 
   grunt.registerTask('build', [
-    'less',
+    'less:lessBuild',
     'clean:buildClean',
     'copy:buildCopy',
-    'postcss',
     'cssmin',
     'uglify',
     'htmlmin',
