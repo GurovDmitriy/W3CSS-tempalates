@@ -1,70 +1,80 @@
 /*@import 'global/normalize.less';*/
 @font-face {
   font-family: 'Oswald';
-  src: url('../fonts/woff2/Oswald-VariableFont_wght.woff2') format('woff2-variations');
+  src: url('../font/woff2/Oswald-VariableFont_wght.woff2') format('woff2-variations');
+  src: url('../font/woff/Oswald-VariableFont_wght.woff') format('woff-variations');
   font-weight: 200 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Raleway';
-  src: url('../fonts/woff2/Raleway-VariableFont_wght.woff2') format('woff2-variations');
+  src: url('../font/woff2/Raleway-VariableFont_wght.woff2') format('woff2-variations');
+  src: url('../font/woff/Raleway-VariableFont_wght.woff') format('woff-variations');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Montserrat';
-  src: url('../fonts/woff2/Montserrat-Regular.woff2') format('woff2');
+  src: url('../font/woff2/Montserrat-Regular.woff2') format('woff2');
+  src: url('../font/woff/Montserrat-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Montserrat';
-  src: url('../fonts/woff2/Montserrat-Bold.woff2') format('woff2');
+  src: url('../font/woff2/Montserrat-Bold.woff2') format('woff2');
+  src: url('../font/woff/Montserrat-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Open-Sans';
-  src: url('../fonts/woff2/OpenSans-Regular.woff2') format('woff2');
+  src: url('../font/woff2/OpenSans-Regular.woff2') format('woff2');
+  src: url('../font/woff/OpenSans-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Open-Sans';
-  src: url('../fonts/woff2/OpenSans-Bold.woff2') format('woff2');
+  src: url('../font/woff2/OpenSans-Bold.woff2') format('woff2');
+  src: url('../font/woff/OpenSans-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Poppins';
-  src: url('../fonts/woff2/Poppins-Regular.woff2') format('woff2');
+  src: url('../font/woff2/Poppins-Regular.woff2') format('woff2');
+  src: url('../font/woff/Poppins-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Poppins';
-  src: url('../fonts/woff2/Poppins-Bold.woff2') format('woff2');
+  src: url('../font/woff2/Poppins-Bold.woff2') format('woff2');
+  src: url('../font/woff/Poppins-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Lato';
-  src: url('../fonts/woff2/Lato-Regular.woff2') format('woff2');
+  src: url('../font/woff2/Lato-Regular.woff2') format('woff2');
+  src: url('../font/woff/Lato-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Lato';
-  src: url('../fonts/woff2/Lato-Bold.woff2') format('woff2');
+  src: url('../font/woff2/Lato-Bold.woff2') format('woff2');
+  src: url('../font/woff/Lato-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -95,17 +105,24 @@ body {
   padding: 0;
 }
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   scroll-behavior: smooth;
 }
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 600px;
   height: 100vh;
   min-width: 280px;
@@ -162,7 +179,9 @@ textarea {
   resize: vertical;
 }
 footer {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .usr-show {
   display: block;
@@ -188,7 +207,8 @@ footer {
   height: 20px;
   padding: 0;
   border: none;
-  box-shadow: inset 0 -2px 0 0 var(--colorBlack);
+  -webkit-box-shadow: inset 0 -2px 0 0 var(--colorBlack);
+          box-shadow: inset 0 -2px 0 0 var(--colorBlack);
   /*  border-bottom: 2px solid var(--colorBlack);*/
   background-color: transparent;
 }
@@ -209,58 +229,135 @@ footer {
   top: 50%;
   right: 0;
   width: 100%;
-  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 .usr-burger--open {
-  animation-name: burgerOpen;
-  animation-duration: 0.2s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
+  -webkit-animation-name: burgerOpen;
+          animation-name: burgerOpen;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 .usr-burger--open::after {
-  animation-name: burgerAfterOpen;
-  animation-duration: 0.5s;
-  animation-delay: 0.2s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
+  -webkit-animation-name: burgerAfterOpen;
+          animation-name: burgerAfterOpen;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 .usr-burger--open::before {
-  animation-name: burgerBeforeOpen;
-  animation-duration: 0.5s;
-  animation-delay: 0.2s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
+  -webkit-animation-name: burgerBeforeOpen;
+          animation-name: burgerBeforeOpen;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 .usr-burger--close {
-  animation-name: burgerClose;
-  animation-duration: 0.2s;
-  animation-delay: 0.5s;
+  -webkit-animation-name: burgerClose;
+          animation-name: burgerClose;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
   animation-direction: reverse;
-  animation-fill-mode: backwards;
-  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 .usr-burger--close::after {
-  animation-name: burgerAfterClose;
-  animation-duration: 0.5s;
+  -webkit-animation-name: burgerAfterClose;
+          animation-name: burgerAfterClose;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   animation-direction: reverse;
-  animation-fill-mode: backwards;
-  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 .usr-burger--close::before {
-  animation-name: burgerBeforeClose;
-  animation-duration: 0.5s;
+  -webkit-animation-name: burgerBeforeClose;
+          animation-name: burgerBeforeClose;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   animation-direction: reverse;
-  animation-fill-mode: backwards;
-  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
-@keyframes burgerOpen {
+@-webkit-keyframes burgerOpen {
   0% {
-    box-shadow: inset 0 -2px 0 0 var(--colorBlack);
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorBlack);
+            box-shadow: inset 0 -2px 0 0 var(--colorBlack);
     /*border-bottom: 2px solid var(--colorBlack);*/
   }
   100% {
-    box-shadow: inset 0 -2px 0 0 transparent;
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
     /*border-bottom: 2px solid transparent;*/
+  }
+}
+@keyframes burgerOpen {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorBlack);
+            box-shadow: inset 0 -2px 0 0 var(--colorBlack);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@-webkit-keyframes burgerAfterOpen {
+  0% {
+    width: 100%;
+  }
+  25% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(1);
+            transform: translate(0, -50%) rotate(0) scaleX(1);
+  }
+  25% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(1);
+            transform: translate(0, -50%) rotate(0) scaleX(1);
+  }
+  50% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  50% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  75% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  100% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
+            transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
   }
 }
 @keyframes burgerAfterOpen {
@@ -269,66 +366,164 @@ footer {
   }
   25% {
     width: 100%;
-    transform: translate(0, -50%) rotate(0) scaleX(1);
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(1);
+            transform: translate(0, -50%) rotate(0) scaleX(1);
   }
   25% {
     width: 100%;
-    transform: translate(0, -50%) rotate(0) scaleX(1);
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(1);
+            transform: translate(0, -50%) rotate(0) scaleX(1);
   }
   50% {
     width: 100%;
-    transform: translate(0, -50%) rotate(0) scaleX(0.6);
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   50% {
     width: 100%;
-    transform: translate(0, -50%) rotate(0) scaleX(0.6);
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   75% {
     width: 100%;
-    transform: translate(0, -50%) rotate(0) scaleX(0.6);
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   100% {
     width: 100%;
-    transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
+    -webkit-transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
+            transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
+  }
+}
+@-webkit-keyframes burgerBeforeOpen {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
+  }
+  25% {
+    top: 0;
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
+  }
+  25% {
+    top: 0;
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
+  }
+  50% {
+    top: 0;
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(0.6);
+            transform: translate(0, 0) rotate(0) scaleX(0.6);
+  }
+  75% {
+    top: 50%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  75% {
+    top: 50%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  100% {
+    top: 50%;
+    -webkit-transform: translate(0, -50%) rotate(-45deg) scaleX(0.6);
+            transform: translate(0, -50%) rotate(-45deg) scaleX(0.6);
   }
 }
 @keyframes burgerBeforeOpen {
   0% {
-    transform: translate(0, 0) rotate(0) scaleX(1);
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
   }
   25% {
     top: 0;
-    transform: translate(0, 0) rotate(0) scaleX(1);
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
   }
   25% {
     top: 0;
-    transform: translate(0, 0) rotate(0) scaleX(1);
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
   }
   50% {
     top: 0;
-    transform: translate(0, 0) rotate(0) scaleX(0.6);
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(0.6);
+            transform: translate(0, 0) rotate(0) scaleX(0.6);
   }
   75% {
     top: 50%;
-    transform: translate(0, -50%) rotate(0) scaleX(0.6);
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   75% {
     top: 50%;
-    transform: translate(0, -50%) rotate(0) scaleX(0.6);
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   100% {
     top: 50%;
-    transform: translate(0, -50%) rotate(-45deg) scaleX(0.6);
+    -webkit-transform: translate(0, -50%) rotate(-45deg) scaleX(0.6);
+            transform: translate(0, -50%) rotate(-45deg) scaleX(0.6);
+  }
+}
+@-webkit-keyframes burgerClose {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorBlack);
+            box-shadow: inset 0 -2px 0 0 var(--colorBlack);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
   }
 }
 @keyframes burgerClose {
   0% {
-    box-shadow: inset 0 -2px 0 0 var(--colorBlack);
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorBlack);
+            box-shadow: inset 0 -2px 0 0 var(--colorBlack);
     /*border-bottom: 2px solid var(--colorBlack);*/
   }
   100% {
-    box-shadow: inset 0 -2px 0 0 transparent;
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
     /*border-bottom: 2px solid transparent;*/
+  }
+}
+@-webkit-keyframes burgerAfterClose {
+  0% {
+    width: 100%;
+  }
+  25% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(1);
+            transform: translate(0, -50%) rotate(0) scaleX(1);
+  }
+  25% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(1);
+            transform: translate(0, -50%) rotate(0) scaleX(1);
+  }
+  50% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  50% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  75% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  100% {
+    width: 100%;
+    -webkit-transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
+            transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
   }
 }
 @keyframes burgerAfterClose {
@@ -337,56 +532,105 @@ footer {
   }
   25% {
     width: 100%;
-    transform: translate(0, -50%) rotate(0) scaleX(1);
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(1);
+            transform: translate(0, -50%) rotate(0) scaleX(1);
   }
   25% {
     width: 100%;
-    transform: translate(0, -50%) rotate(0) scaleX(1);
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(1);
+            transform: translate(0, -50%) rotate(0) scaleX(1);
   }
   50% {
     width: 100%;
-    transform: translate(0, -50%) rotate(0) scaleX(0.6);
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   50% {
     width: 100%;
-    transform: translate(0, -50%) rotate(0) scaleX(0.6);
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   75% {
     width: 100%;
-    transform: translate(0, -50%) rotate(0) scaleX(0.6);
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   100% {
     width: 100%;
-    transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
+    -webkit-transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
+            transform: translate(0, -50%) rotate(45deg) scaleX(0.6);
+  }
+}
+@-webkit-keyframes burgerBeforeClose {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
+  }
+  25% {
+    top: 0;
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
+  }
+  25% {
+    top: 0;
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
+  }
+  50% {
+    top: 0;
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(0.6);
+            transform: translate(0, 0) rotate(0) scaleX(0.6);
+  }
+  75% {
+    top: 50%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  75% {
+    top: 50%;
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
+  }
+  100% {
+    top: 50%;
+    -webkit-transform: translate(0, -50%) rotate(-45deg) scaleX(0.6);
+            transform: translate(0, -50%) rotate(-45deg) scaleX(0.6);
   }
 }
 @keyframes burgerBeforeClose {
   0% {
-    transform: translate(0, 0) rotate(0) scaleX(1);
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
   }
   25% {
     top: 0;
-    transform: translate(0, 0) rotate(0) scaleX(1);
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
   }
   25% {
     top: 0;
-    transform: translate(0, 0) rotate(0) scaleX(1);
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(1);
+            transform: translate(0, 0) rotate(0) scaleX(1);
   }
   50% {
     top: 0;
-    transform: translate(0, 0) rotate(0) scaleX(0.6);
+    -webkit-transform: translate(0, 0) rotate(0) scaleX(0.6);
+            transform: translate(0, 0) rotate(0) scaleX(0.6);
   }
   75% {
     top: 50%;
-    transform: translate(0, -50%) rotate(0) scaleX(0.6);
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   75% {
     top: 50%;
-    transform: translate(0, -50%) rotate(0) scaleX(0.6);
+    -webkit-transform: translate(0, -50%) rotate(0) scaleX(0.6);
+            transform: translate(0, -50%) rotate(0) scaleX(0.6);
   }
   100% {
     top: 50%;
-    transform: translate(0, -50%) rotate(-45deg) scaleX(0.6);
+    -webkit-transform: translate(0, -50%) rotate(-45deg) scaleX(0.6);
+            transform: translate(0, -50%) rotate(-45deg) scaleX(0.6);
   }
 }
 .w3css-gourment-catering header {
@@ -465,7 +709,8 @@ footer {
   left: 50%;
   z-index: 12;
   width: 100%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 @media (min-width: 601px) {
   .w3css-architect .usr-gallery .w3-image--show {
@@ -600,35 +845,66 @@ body.w3css-photolio {
 .w3css-photolio .usr-burger {
   top: 16px;
   right: 16px;
-  box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+  -webkit-box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+          box-shadow: inset 0 -2px 0 0 var(--colorGrey);
 }
 .w3css-photolio .usr-burger::before,
 .w3css-photolio .usr-burger::after {
   background-color: var(--colorGrey);
 }
 .w3css-photolio .usr-burger--open {
-  animation-name: burgerOpenPhotolio;
+  -webkit-animation-name: burgerOpenPhotolio;
+          animation-name: burgerOpenPhotolio;
 }
 .w3css-photolio .usr-burger--close {
-  animation-name: burgerClosePhotolio;
+  -webkit-animation-name: burgerClosePhotolio;
+          animation-name: burgerClosePhotolio;
 }
-@keyframes burgerOpenPhotolio {
+@-webkit-keyframes burgerOpenPhotolio {
   0% {
-    box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+            box-shadow: inset 0 -2px 0 0 var(--colorGrey);
     /*border-bottom: 2px solid var(--colorBlack);*/
   }
   100% {
-    box-shadow: inset 0 -2px 0 0 transparent;
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@keyframes burgerOpenPhotolio {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+            box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@-webkit-keyframes burgerClosePhotolio {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+            box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
     /*border-bottom: 2px solid transparent;*/
   }
 }
 @keyframes burgerClosePhotolio {
   0% {
-    box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+            box-shadow: inset 0 -2px 0 0 var(--colorGrey);
     /*border-bottom: 2px solid var(--colorBlack);*/
   }
   100% {
-    box-shadow: inset 0 -2px 0 0 transparent;
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
     /*border-bottom: 2px solid transparent;*/
   }
 }
@@ -647,7 +923,8 @@ body.w3css-photolio {
   left: 50%;
   z-index: 12;
   width: 100%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 @media (min-width: 601px) {
   .w3css-photolio .usr-gallery .w3-image--show {
@@ -680,7 +957,8 @@ body.w3css-photographer {
 .w3css-photographer img {
   width: 100%;
   height: auto;
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 .w3css-photographer .w3-content {
   max-width: 1500px;
@@ -703,7 +981,8 @@ body.w3css-photographer {
   left: 50%;
   z-index: 12;
   width: 100%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 @media (min-width: 601px) {
   .w3css-photographer .usr-gallery .w3-image--show {
@@ -729,12 +1008,14 @@ body.w3css-photographer {
 }
 .w3css-photographer-2 nav {
   position: static;
-  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 @media (min-width: 601px) {
   .w3css-photographer-2 nav {
     position: absolute;
-    transform: translate(-50%, 50%);
+    -webkit-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%);
   }
 }
 .w3css-photographer-2 img {
@@ -763,7 +1044,8 @@ body.w3css-photographer {
   left: 50%;
   z-index: 12;
   width: 100%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 @media (min-width: 601px) {
   .w3css-photographer-2 .usr-gallery .w3-image--show {
@@ -803,7 +1085,8 @@ body.w3css-web-designer {
 .w3css-web-designer img {
   width: 100%;
   height: auto;
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 .w3css-web-designer nav {
   width: 120px;
@@ -879,7 +1162,8 @@ body.w3css-web-designer {
   position: fixed;
   top: 16px;
   right: 16px;
-  box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+  -webkit-box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+          box-shadow: inset 0 -2px 0 0 var(--colorGrey);
 }
 @media (min-width: 601px) {
   .w3css-web-designer .usr-burger {
@@ -891,28 +1175,58 @@ body.w3css-web-designer {
   background-color: var(--colorGrey);
 }
 .w3css-web-designer .usr-burger--open {
-  animation-name: burgerOpenWebdes;
+  -webkit-animation-name: burgerOpenWebdes;
+          animation-name: burgerOpenWebdes;
 }
 .w3css-web-designer .usr-burger--close {
-  animation-name: burgerCloseWebdes;
+  -webkit-animation-name: burgerCloseWebdes;
+          animation-name: burgerCloseWebdes;
 }
-@keyframes burgerOpenWebdes {
+@-webkit-keyframes burgerOpenWebdes {
   0% {
-    box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+            box-shadow: inset 0 -2px 0 0 var(--colorGrey);
     /*border-bottom: 2px solid var(--colorBlack);*/
   }
   100% {
-    box-shadow: inset 0 -2px 0 0 transparent;
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@keyframes burgerOpenWebdes {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+            box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@-webkit-keyframes burgerCloseWebdes {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+            box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
     /*border-bottom: 2px solid transparent;*/
   }
 }
 @keyframes burgerCloseWebdes {
   0% {
-    box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorGrey);
+            box-shadow: inset 0 -2px 0 0 var(--colorGrey);
     /*border-bottom: 2px solid var(--colorBlack);*/
   }
   100% {
-    box-shadow: inset 0 -2px 0 0 transparent;
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
     /*border-bottom: 2px solid transparent;*/
   }
 }
@@ -938,7 +1252,8 @@ body.w3css-web-designer {
   left: 50%;
   z-index: 12;
   width: 100%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 @media (min-width: 601px) {
   .w3css-web-designer .usr-gallery .w3-image--show {
@@ -1022,7 +1337,8 @@ body.w3css-interior-design {
   position: fixed;
   top: 16;
   right: 16px;
-  box-shadow: inset 0 -2px 0 0 var(--colorRed);
+  -webkit-box-shadow: inset 0 -2px 0 0 var(--colorRed);
+          box-shadow: inset 0 -2px 0 0 var(--colorRed);
 }
 @media (min-width: 601px) {
   .w3css-interior-design .usr-burger {
@@ -1034,28 +1350,58 @@ body.w3css-interior-design {
   background-color: var(--colorRed);
 }
 .w3css-interior-design .usr-burger--open {
-  animation-name: burgerOpenInterior;
+  -webkit-animation-name: burgerOpenInterior;
+          animation-name: burgerOpenInterior;
 }
 .w3css-interior-design .usr-burger--close {
-  animation-name: burgerCloseInterior;
+  -webkit-animation-name: burgerCloseInterior;
+          animation-name: burgerCloseInterior;
 }
-@keyframes burgerOpenInterior {
+@-webkit-keyframes burgerOpenInterior {
   0% {
-    box-shadow: inset 0 -2px 0 0 var(--colorRed);
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorRed);
+            box-shadow: inset 0 -2px 0 0 var(--colorRed);
     /*border-bottom: 2px solid var(--colorBlack);*/
   }
   100% {
-    box-shadow: inset 0 -2px 0 0 transparent;
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@keyframes burgerOpenInterior {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorRed);
+            box-shadow: inset 0 -2px 0 0 var(--colorRed);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
+    /*border-bottom: 2px solid transparent;*/
+  }
+}
+@-webkit-keyframes burgerCloseInterior {
+  0% {
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorRed);
+            box-shadow: inset 0 -2px 0 0 var(--colorRed);
+    /*border-bottom: 2px solid var(--colorBlack);*/
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
     /*border-bottom: 2px solid transparent;*/
   }
 }
 @keyframes burgerCloseInterior {
   0% {
-    box-shadow: inset 0 -2px 0 0 var(--colorRed);
+    -webkit-box-shadow: inset 0 -2px 0 0 var(--colorRed);
+            box-shadow: inset 0 -2px 0 0 var(--colorRed);
     /*border-bottom: 2px solid var(--colorBlack);*/
   }
   100% {
-    box-shadow: inset 0 -2px 0 0 transparent;
+    -webkit-box-shadow: inset 0 -2px 0 0 transparent;
+            box-shadow: inset 0 -2px 0 0 transparent;
     /*border-bottom: 2px solid transparent;*/
   }
 }
@@ -1088,7 +1434,8 @@ body.w3css-interior-design {
   left: 50%;
   z-index: 12;
   width: 100%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 @media (min-width: 601px) {
   .w3css-interior-design .usr-gallery .w3-image--show {
@@ -1134,7 +1481,8 @@ body.w3css-app-launch.w3-content {
     top: 50%;
     right: 16px;
     border-radius: 8px;
-    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
   }
 }
 .js-focus-visible .w3css-app-launch .focus-visible {
@@ -1209,3 +1557,4 @@ body.w3css-marketing {
 .js-focus-visible .w3css-marketing .usr-pricing h3.focus-visible {
   outline: 2px solid var(--colorWhite);
 }
+/*# sourceMappingURL=/css/style.css.map */
